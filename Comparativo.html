@@ -62,10 +62,10 @@
                 <a class="nav-link" href="checkout.html">Carrinho</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="login.html">Login</a>
+                <a class="nav-link" data-toggle="modal" data-target="#login">Login</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="Registar.html">Registar</a>
+                <a class="nav-link" data-toggle="modal" data-target="#regista">Registar</a>
               </li>
               <li class="nav-item ative">
                 <a class="nav-link" href="Comparativo.html">Comparativo</a>
@@ -127,7 +127,74 @@
 
     <!-- Footer Starts Here -->
 
-    
+
+      <div class="modal fade" id="login" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="form-group">
+                  <label for="InputEmail">E-mail:</label>
+                  <input type="email" class="form-control" id="InputEmail">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Palavra-passe:</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1">
+                </div>
+                <div class="form-group form-check">
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                  <label class="form-check-label" for="exampleCheck1">Manter-me logado</label>
+                </div>
+                <h8>Ainda não tem conta?</h8>
+                <a data-toggle="modal" data-target="#regista">
+                  <br><button type="button" class="btn btn-outline-success" data-dismiss="modal">Registar</button></a>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Fechar</button>
+              <button type="button" class="btn btn-outline-success" >Entrar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="modal fade" id="regista" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Registar</h5>
+
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="form-group">
+                  <label for="InputName">Nome:</label>
+                  <input type="name" class="form-control" id="InputName" aria-describedby="emailHelp">
+
+                </div>
+                <div class="form-group">
+                  <label for="InputEmail">E-mail:</label>
+                  <input type="email" class="form-control" id="InputEmail">
+                </div>
+                <div class="form-group">
+                  <label for="InputPassword1">Palavra-passe</label>
+                  <input type="password" class="form-control" id="InputPassword1">
+
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Fechar</button>
+              <button type="button" class="btn btn-outline-success">Registar</button>
+            </div>
+          </div>
+        </div>
+      </div>
 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
