@@ -1,5 +1,8 @@
 
-
+<?php
+    include_once ("includes/body.inc.php");
+    top();
+?>
 <!-- Page Content -->
 <div class="page-heading header-text">
     <div class="container">
@@ -27,7 +30,7 @@
                         </div>
 
                         <p></p>
-                        <a href="product-details.html" class="filled-button">Ver mais</a>
+                        <a href="product-details.php" class="filled-button">Ver mais</a>
                     </div>
                 </div>
 
@@ -46,7 +49,7 @@
                         </div>
 
                         <p></p>
-                        <a href="product-details.html" class="filled-button">Ver mais</a>
+                        <a href="product-details.php" class="filled-button">Ver mais</a>
 
                     </div>
                 </div>
@@ -66,7 +69,7 @@
                         </div>
 
                         <p></p>
-                        <a href="product-details.html" class="filled-button">Ver mais</a>
+                        <a href="product-details.php" class="filled-button">Ver mais</a>
 
                     </div>
                 </div>
@@ -86,7 +89,7 @@
                         </div>
 
                         <p></p>
-                        <a href="product-details.html" class="filled-button">Ver mais</a>
+                        <a href="product-details.php" class="filled-button">Ver mais</a>
 
                     </div>
                 </div>
@@ -106,7 +109,7 @@
                         </div>
 
                         <p></p>
-                        <a href="product-details.html" class="filled-button">Ver mais</a>
+                        <a href="product-details.php" class="filled-button">Ver mais</a>
 
                     </div>
                 </div>
@@ -126,7 +129,7 @@
                         </div>
 
                         <p></p>
-                        <a href="product-details.html" class="filled-button">Ver mais</a>
+                        <a href="product-details.php" class="filled-button">Ver mais</a>
 
                     </div>
                 </div>

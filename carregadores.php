@@ -1,5 +1,7 @@
-
-
+<?php
+include_once ("includes/body.inc.php");
+top();
+?>
 <!-- Page Content -->
 <div class="page-heading header-text">
     <div class="container">
@@ -17,9 +19,9 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="service-item">
-                    <img src="assets/images/wirelessfones.gif" alt="">
+                    <img src="assets/images/carregador1m.gif" alt="">
                     <div class="down-content">
-                        <h4>Auriculares Bluetooth True Wireless SAMSUNG Galaxy Buds+ (In Ear - Microfone - Branco)</h4>
+                        <h4>Carregador 1 metro micro USB MOPHIE</h4>
                         <div style="margin-bottom:10px;">
                   <span>
                       <del><sup>$</sup>1999 </del> &nbsp; <sup>$</sup>1779
@@ -27,26 +29,7 @@
                         </div>
 
                         <p></p>
-                        <a href="product-details.html" class="filled-button">Ver mais</a>
-                    </div>
-                </div>
-
-                <br>
-            </div>
-
-            <div class="col-md-4">
-                <div class="service-item">
-                    <img src="assets/images/wirelessfonesapple.gif" alt="">
-                    <div class="down-content">
-                        <h4>AirPods 2019 Bluetooth True Wireless APPLE (In Ear - Microfone - Branco)</h4>
-                        <div style="margin-bottom:10px;">
-                  <span>
-                      <del><sup>$</sup>1999 </del> &nbsp; <sup>$</sup>1779
-                  </span>
-                        </div>
-
-                        <p></p>
-                        <a href="product-details.html" class="filled-button">Ver mais</a>
+                        <a href="product-details.php" class="filled-button">Ver mais</a>
 
                     </div>
                 </div>
@@ -56,9 +39,9 @@
 
             <div class="col-md-4">
                 <div class="service-item">
-                    <img src="assets/images/fonesapple.gif" alt="">
+                    <img src="assets/images/carregador9cm.gif" alt="">
                     <div class="down-content">
-                        <h4>EarPods APPLE Lightning Branco</h4>
+                        <h4>Carregador 9 centimetros micro USB MOPHIE</h4>
                         <div style="margin-bottom:10px;">
                   <span>
                       <del><sup>$</sup>1999 </del> &nbsp; <sup>$</sup>1779
@@ -66,7 +49,7 @@
                         </div>
 
                         <p></p>
-                        <a href="product-details.html" class="filled-button">Ver mais</a>
+                        <a href="product-details.php" class="filled-button">Ver mais</a>
 
                     </div>
                 </div>
@@ -76,9 +59,9 @@
 
             <div class="col-md-4">
                 <div class="service-item">
-                    <img src="assets/images/sonyfonesfios.gif" alt="">
+                    <img src="assets/images/carregadorwire.gif" alt="">
                     <div class="down-content">
-                        <h4>Auriculares Com fio SONY MDR-EX15AP (In Ear - Microfone - Preto)</h4>
+                        <h4>Carregador MagSafe APPLE Wireless</h4>
                         <div style="margin-bottom:10px;">
                   <span>
                       <del><sup>$</sup>1999 </del> &nbsp; <sup>$</sup>1779
@@ -86,7 +69,7 @@
                         </div>
 
                         <p></p>
-                        <a href="product-details.html" class="filled-button">Ver mais</a>
+                        <a href="product-details.php" class="filled-button">Ver mais</a>
 
                     </div>
                 </div>
@@ -96,9 +79,9 @@
 
             <div class="col-md-4">
                 <div class="service-item">
-                    <img src="assets/images/jlbfios.gif" alt="">
+                    <img src="assets/images/carregadorapplefast.gif" alt="">
                     <div class="down-content">
-                        <h4>Auriculares Com fio JBL T 205 (In Ear - Microfone - Preto)</h4>
+                        <h4>Carregador Lightning Fast Charger para iPhone(2,1A)</h4>
                         <div style="margin-bottom:10px;">
                   <span>
                       <del><sup>$</sup>1999 </del> &nbsp; <sup>$</sup>1779
@@ -106,7 +89,7 @@
                         </div>
 
                         <p></p>
-                        <a href="product-details.html" class="filled-button">Ver mais</a>
+                        <a href="product-details.php" class="filled-button">Ver mais</a>
 
                     </div>
                 </div>
@@ -116,9 +99,9 @@
 
             <div class="col-md-4">
                 <div class="service-item">
-                    <img src="assets/images/jlbfioskit.gif" alt="">
+                    <img src="assets/images/carregadorapple1m.gif" alt="">
                     <div class="down-content">
-                        <h4>Auriculares Com fio JBL T 290 (In Ear - Microfone - Preto)</h4>
+                        <h4>Cabo APPLE MXLY2ZM/A (USB - Lightning - 1 m - Branco)</h4>
                         <div style="margin-bottom:10px;">
                   <span>
                       <del><sup>$</sup>1999 </del> &nbsp; <sup>$</sup>1779
@@ -126,7 +109,27 @@
                         </div>
 
                         <p></p>
-                        <a href="product-details.html" class="filled-button">Ver mais</a>
+                        <a href="product-details.php" class="filled-button">Ver mais</a>
+
+                    </div>
+                </div>
+
+                <br>
+            </div>
+
+            <div class="col-md-4">
+                <div class="service-item">
+                    <img src="assets/images/carregadorkit.gif" alt="">
+                    <div class="down-content">
+                        <h4>Kit Carregador + cabo Micro-USB GOODIS W1-24-11 Preto</h4>
+                        <div style="margin-bottom:10px;">
+                  <span>
+                      <del><sup>$</sup>1999 </del> &nbsp; <sup>$</sup>1779
+                  </span>
+                        </div>
+
+                        <p></p>
+                        <a href="product-details.php" class="filled-button">Ver mais</a>
 
                     </div>
                 </div>
