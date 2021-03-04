@@ -54,7 +54,7 @@ top();
             <div class="img-fill">
                 <div class="text-content">
                   <h6>Algum problema?</h6>
-                  <a style="color:#FFFFFF"><h3>Se estivere com algum problema contacta-nos para o podermos ajudar de forma eficiente.<br></h3></a>
+                  <a style="color:#ffffff"><h3>Se estivere com algum problema contacta-nos para o podermos ajudar de forma eficiente.<br></h3></a>
                   <p></p>
                   <a href="contact.html" class="filled-button">Contacta-nos</a>
                 </div>
@@ -187,8 +187,4 @@ top();
           }
       }
     </script>
-
   </body>
-<?php
-bottom();
-?>

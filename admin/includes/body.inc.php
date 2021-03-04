@@ -19,17 +19,17 @@ function top(){
                             <a class="dropdown-toggle nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Produtos</a>
 
                             <div class="dropdown-menu">
-                                <a class="dropdown-item" href="products.html">Telemoveis</a>
-                                <a class="dropdown-item" href="capas.html">Capas</a>
-                                <a class="dropdown-item" href="carregadores.html">Carregadores</a>
-                                <a class="dropdown-item" href="fones.html">Fones</a>
+                                <a class="dropdown-item" href="products.php">Telemoveis</a>
+                                <a class="dropdown-item" href="capas.php">Capas</a>
+                                <a class="dropdown-item" href="carregadores.php">Carregadores</a>
+                                <a class="dropdown-item" href="fones.php">Fones</a>
                             </div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="checkout.html">Carrinho</a>
+                            <a class="nav-link" href="checkout.php">Carrinho</a>
                         </li>
                         <li class="nav-item ">
-                            <a class="nav-link" href="Comparativo.html">Comparativo</a>
+                            <a class="nav-link" href="Comparativo.php">Comparativo</a>
                         </li>
                     </ul>
                 </div>
