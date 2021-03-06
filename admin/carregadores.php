@@ -15,6 +15,7 @@ top();
             </div>
 
 <div class="services">
+    <table>
     <div class="container">
         <div class="row">
             <div class="col-md-4">
@@ -137,7 +138,7 @@ top();
                 <br>
             </div>
         </div>
-
+        </table>
         <br>
         <br>
 
