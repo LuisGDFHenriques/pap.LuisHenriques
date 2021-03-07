@@ -30,117 +30,70 @@ top();
     </select>
 </div>
 <div class="services">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4">
-                <div class="service-item">
-                    <img src="assets/images/SAMSUNGZFOLD2.jpg" alt="">
-                    <div class="down-content">
-                        <h4>Samsung Z Fold2</h4>
-                        <div style="margin-bottom:10px;">
-                  <span>
-                      <del><sup>$</sup>1999 </del> &nbsp; <sup>$</sup>1779
-                  </span>
-                        </div>
-
-                    </div>
-                </div>
-
-                <br>
-            </div>
-
-            <div class="col-md-4">
-                <div class="service-item">
-                    <img src="assets/images/IPHONE8.gif" alt="">
-                    <div class="down-content">
-                        <h4>Iphone 8</h4>
-                        <div style="margin-bottom:10px;">
-                  <span>
-                      <del><sup>$</sup>1999 </del> &nbsp; <sup>$</sup>1779
-                  </span>
-                        </div>
-
-                        <p></p>
-
-                    </div>
-                </div>
-
-                <br>
-            </div>
-
-            <div class="col-md-4">
-                <div class="service-item">
-                    <img src="assets/images/Iphonex.jpg" alt="">
-                    <div class="down-content">
-                        <h4>Iphone X</h4>
-                        <div style="margin-bottom:10px;">
-                  <span>
-                      <del><sup>$</sup>1999 </del> &nbsp; <sup>$</sup>1779
-                  </span>
-                        </div>
-
-
-                    </div>
-                </div>
-
-                <br>
-            </div>
-
-            <div class="col-md-4">
-                <div class="service-item">
-                    <img src="assets/images/Iphone11.jpg" alt="">
-                    <div class="down-content">
-                        <h4>Iphone 11</h4>
-                        <div style="margin-bottom:10px;">
-                  <span>
-                      <del><sup>$</sup>1999 </del> &nbsp; <sup>$</sup>1779
-                  </span>
-                        </div>
-
-                        <p></p>
-
-                    </div>
-                </div>
-
-                <br>
-            </div>
-
-            <div class="col-md-4">
-                <div class="service-item">
-                    <img src="assets/images/Iphone12.jpg" alt="">
-                    <div class="down-content">
-                        <h4>Iphone 12</h4>
-                        <div style="margin-bottom:10px;">
-                  <span>
-                      <del><sup>$</sup>1999 </del> &nbsp; <sup>$</sup>1779
-                  </span>
-                        </div>
-
-                        <p></p>
-                    </div>
-                </div>
-
-                <br>
-            </div>
-
-            <div class="col-md-4">
-                <div class="service-item">
-                    <img src="assets/images/IPHONE7.gif" alt="">
-                    <div class="down-content">
-                        <h4>Iphone 7</h4>
-                        <div style="margin-bottom:10px;">
-                  <span>
-                      <del><sup>$</sup>1999 </del> &nbsp; <sup>$</sup>1779
-                  </span>
-                        </div>
-
-                        <p></p>
-                    </div>
-                </div>
-
-                <br>
-            </div>
-        </div>
+    <table class="table table-hover table-striped">
+        <tr>
+            <th style="text-align: center">Imagem</th>
+            <th style="text-align: center">Nome</th>
+            <th style="text-align: center">Preço Original</th>
+            <th style="text-align: center">Preço Atual</th>
+            <th colspan="3" style="text-align: center"> Opções </th>
+        </tr>
+        <tr>
+            <td><img src="assets/images/SAMSUNGZFOLD2.jpg" alt=""></td>
+            <td style="text-align: center">Samsung Z Fold2</td>
+            <td style="text-align: center">2000.00 €</td>
+            <td style="text-align: center">1700.00 €</td>
+            <td><span class="btn-sm btn-primary">Edita</span></td>
+            <td><span class="btn-sm btn-danger">Elimina</span></td>
+            <td><a href="#" data-toggle="modal" data-target="#post1"><span class="btn-sm btn-success"><span class="btn-sm btn-success">Detalhes</span></a></td>
+        </tr>
+        <tr>
+            <td><img src="assets/images/IPHONE8.gif" alt=""></td>
+            <td style="text-align: center">Iphone 8</td>
+            <td style="text-align: center">2000.00 €</td>
+            <td style="text-align: center">1700.00 €</td>
+            <td><span class="btn-sm btn-primary">Edita</span></td>
+            <td><span class="btn-sm btn-danger">Elimina</span></td>
+            <td><a href="#" data-toggle="modal" data-target="#post1"><span class="btn-sm btn-success"><span class="btn-sm btn-success">Detalhes</span></a></td>
+        </tr>
+        <tr>
+            <td><img src="assets/images/Iphonex.jpg" alt=""></td>
+            <td style="text-align: center">Iphone X</td>
+            <td style="text-align: center">2000.00 €</td>
+            <td style="text-align: center">1700.00 €</td>
+            <td><span class="btn-sm btn-primary">Edita</span></td>
+            <td><span class="btn-sm btn-danger">Elimina</span></td>
+            <td><a href="#" data-toggle="modal" data-target="#post1"><span class="btn-sm btn-success"><span class="btn-sm btn-success">Detalhes</span></a></td>
+        </tr>
+        <tr>
+            <td><img src="assets/images/Iphone11.jpg" alt=""></td>
+            <td style="text-align: center">Iphone 11</td>
+            <td style="text-align: center">2000.00 €</td>
+            <td style="text-align: center">1700.00 €</td>
+            <td><span class="btn-sm btn-primary">Edita</span></td>
+            <td><span class="btn-sm btn-danger">Elimina</span></td>
+            <td><a href="#" data-toggle="modal" data-target="#post1"><span class="btn-sm btn-success"><span class="btn-sm btn-success">Detalhes</span></a></td>
+        </tr>
+        <tr>
+            <td><img src="assets/images/Iphone12.jpg" alt=""></td>
+            <td style="text-align: center">Iphone 12</td>
+            <td style="text-align: center">2000.00 €</td>
+            <td style="text-align: center">1700.00 €</td>
+            <td><span class="btn-sm btn-primary">Edita</span></td>
+            <td><span class="btn-sm btn-danger">Elimina</span></td>
+            <td><a href="#" data-toggle="modal" data-target="#post1"><span class="btn-sm btn-success"><span class="btn-sm btn-success">Detalhes</span></a></td>
+        </tr>
+        <tr>
+            <td><img src="assets/images/IPHONE7.gif" alt=""></td>
+            <td style="text-align: center">Iphone 7</td>
+            <td style="text-align: center">2000.00 €</td>
+            <td style="text-align: center">1700.00 €</td>
+            <td><span class="btn-sm btn-primary">Edita</span></td>
+            <td><span class="btn-sm btn-danger">Elimina</span></td>
+            <td><a href="#" data-toggle="modal" data-target="#post1"><span class="btn-sm btn-success"><span class="btn-sm btn-success">Detalhes</span></a></td>
+        </tr>
+    </table>
+</div>
 
         <br>
         <br>

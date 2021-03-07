@@ -15,127 +15,71 @@ top();
             </div>
 
 <div class="services">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4">
-                <div class="service-item">
-                    <img src="assets/images/capaiphone7.gif" alt="">
-                    <div class="down-content">
-                        <h4>Capa para Iphone 7</h4>
-                        <div style="margin-bottom:10px;">
-                  <span>
-                      <del><sup>$</sup>1999 </del> &nbsp; <sup>$</sup>1779
-                  </span>
-                        </div>
+    <table class="table table-hover table-striped">
+        <tr>
+            <th style="text-align: center">Imagem</th>
+            <th style="text-align: center">Nome</th>
+            <th style="text-align: center">Preço Original</th>
+            <th style="text-align: center">Preço Atual</th>
+            <th colspan="3" style="text-align: center"> Opções </th>
+        </tr>
+        <tr>
+            <td><img src="assets/images/capaiphone7.gif" alt=""></td>
+            <td style="text-align: center">Capa para Iphone 7</td>
+            <td style="text-align: center">2000.00 €</td>
+            <td style="text-align: center">1700.00 €</td>
+            <td><span class="btn-sm btn-primary">Edita</span></td>
+            <td><span class="btn-sm btn-danger">Elimina</span></td>
+            <td><a href="#" data-toggle="modal" data-target="#post1"><span class="btn-sm btn-success"><span class="btn-sm btn-success">Detalhes</span></a></td>
+        </tr>
+        <tr>
+            <td><img src="assets/images/capaiphone8.gif" alt=""></td>
+            <td style="text-align: center">Capa para Iphone 8</td>
+            <td style="text-align: center">2000.00 €</td>
+            <td style="text-align: center">1700.00 €</td>
+            <td><span class="btn-sm btn-primary">Edita</span></td>
+            <td><span class="btn-sm btn-danger">Elimina</span></td>
+            <td><a href="#" data-toggle="modal" data-target="#post1"><span class="btn-sm btn-success"><span class="btn-sm btn-success">Detalhes</span></a></td>
+        </tr>
+        <tr>
+            <td><img src="assets/images/capaiphonex.gif" alt=""></td>
+            <td style="text-align: center">Capa para Iphone X</td>
+            <td style="text-align: center">2000.00 €</td>
+            <td style="text-align: center">1700.00 €</td>
+            <td><span class="btn-sm btn-primary">Edita</span></td>
+            <td><span class="btn-sm btn-danger">Elimina</span></td>
+            <td><a href="#" data-toggle="modal" data-target="#post1"><span class="btn-sm btn-success"><span class="btn-sm btn-success">Detalhes</span></a></td>
+        </tr>
+        <tr>
+            <td><img src="assets/images/capaiphone11.gif" alt=""></td>
+            <td style="text-align: center">Capa para Iphone 11</td>
+            <td style="text-align: center">2000.00 €</td>
+            <td style="text-align: center">1700.00 €</td>
+            <td><span class="btn-sm btn-primary">Edita</span></td>
+            <td><span class="btn-sm btn-danger">Elimina</span></td>
+            <td><a href="#" data-toggle="modal" data-target="#post1"><span class="btn-sm btn-success"><span class="btn-sm btn-success">Detalhes</span></a></td>
+        </tr>
+        <tr>
+            <td><img src="assets/images/capaiphone12.gif" alt=""></td>
+            <td style="text-align: center">Capa para Iphone 12</td>
+            <td style="text-align: center">2000.00 €</td>
+            <td style="text-align: center">1700.00 €</td>
+            <td><span class="btn-sm btn-primary">Edita</span></td>
+            <td><span class="btn-sm btn-danger">Elimina</span></td>
+            <td><a href="#" data-toggle="modal" data-target="#post1"><span class="btn-sm btn-success"><span class="btn-sm btn-success">Detalhes</span></a></td>
+        </tr>
+        <tr>
+            <td><img src="assets/images/capaiphone12f.gif" alt=""></td>
+            <td style="text-align: center">Capa para Iphone 12</td>
+            <td style="text-align: center">2000.00 €</td>
+            <td style="text-align: center">1700.00 €</td>
+            <td><span class="btn-sm btn-primary">Edita</span></td>
+            <td><span class="btn-sm btn-danger">Elimina</span></td>
+            <td><a href="#" data-toggle="modal" data-target="#post1"><span class="btn-sm btn-success"><span class="btn-sm btn-success">Detalhes</span></a></td>
+        </tr>
 
-                        <p></p>
-                        <a href="product-details.php" class="filled-button">Ver mais</a>
 
-                    </div>
-                </div>
-
-                <br>
-            </div>
-
-            <div class="col-md-4">
-                <div class="service-item">
-                    <img src="assets/images/capaiphone8.gif" alt="">
-                    <div class="down-content">
-                        <h4>Capa para Iphone 8</h4>
-                        <div style="margin-bottom:10px;">
-                  <span>
-                      <del><sup>$</sup>1999 </del> &nbsp; <sup>$</sup>1779
-                  </span>
-                        </div>
-
-                        <p></p>
-                        <a href="product-details.php" class="filled-button">Ver mais</a>
-
-                    </div>
-                </div>
-
-                <br>
-            </div>
-
-            <div class="col-md-4">
-                <div class="service-item">
-                    <img src="assets/images/capaiphonex.gif" alt="">
-                    <div class="down-content">
-                        <h4>Capa para Iphone X</h4>
-                        <div style="margin-bottom:10px;">
-                  <span>
-                      <del><sup>$</sup>1999 </del> &nbsp; <sup>$</sup>1779
-                  </span>
-                        </div>
-
-                        <p></p>
-                        <a href="product-details.php" class="filled-button">Ver mais</a>
-
-                    </div>
-                </div>
-
-                <br>
-            </div>
-
-            <div class="col-md-4">
-                <div class="service-item">
-                    <img src="assets/images/capaiphone11.gif" alt="">
-                    <div class="down-content">
-                        <h4>Capa para Iphone 11</h4>
-                        <div style="margin-bottom:10px;">
-                  <span>
-                      <del><sup>$</sup>1999 </del> &nbsp; <sup>$</sup>1779
-                  </span>
-                        </div>
-
-                        <p></p>
-                        <a href="product-details.php" class="filled-button">Ver mais</a>
-
-                    </div>
-                </div>
-
-                <br>
-            </div>
-
-            <div class="col-md-4">
-                <div class="service-item">
-                    <img src="assets/images/capaiphone12.gif" alt="">
-                    <div class="down-content">
-                        <h4>Capa para Iphone 12</h4>
-                        <div style="margin-bottom:10px;">
-                  <span>
-                      <del><sup>$</sup>1999 </del> &nbsp; <sup>$</sup>1779
-                  </span>
-                        </div>
-
-                        <p></p>
-                        <a href="product-details.php" class="filled-button">Ver mais</a>
-
-                    </div>
-                </div>
-
-                <br>
-            </div>
-
-            <div class="col-md-4">
-                <div class="service-item">
-                    <img src="assets/images/capaiphone12f.gif" alt="">
-                    <div class="down-content">
-                        <h4>Capa para Iphone 12</h4>
-                        <div style="margin-bottom:10px;">
-                  <span>
-                      <del><sup>$</sup>1999 </del> &nbsp; <sup>$</sup>1779
-                  </span>
-                        </div>
-
-                        <p></p>
-                        <a href="product-details.php" class="filled-button">Ver mais</a>
-
-                    </div>
-                </div>
-
-                <br>
-            </div>
+    </table>
         </div>
 
         <br>

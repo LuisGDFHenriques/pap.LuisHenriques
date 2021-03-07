@@ -15,130 +15,72 @@ top();
             </div>
 
 <div class="services">
-    <table>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4">
-                <div class="service-item">
-                    <img src="assets/images/carregador1m.gif" alt="">
-                    <div class="down-content">
-                        <h4>Carregador 1 metro micro USB MOPHIE</h4>
-                        <div style="margin-bottom:10px;">
-                  <span>
-                      <del><sup>$</sup>1999 </del> &nbsp; <sup>$</sup>1779
-                  </span>
-                        </div>
 
-                        <p></p>
-                        <a href="product-details.php" class="filled-button">Ver mais</a>
+    <table class="table table-hover table-striped">
+            <tr>
+                <th style="text-align: center">Imagem</th>
+                <th style="text-align: center">Nome</th>
+                <th style="text-align: center">Preço Original</th>
+                <th style="text-align: center">Preço Atual</th>
+                <th colspan="3" style="text-align: center"> Opções </th>
+            </tr>
+            <tr>
+                <td><img src="assets/images/carregador1m.gif" alt=""></td>
+                <td style="text-align: center">Carregador 1 metro micro USB MOPHIE</td>
+                <td style="text-align: center">2000.00 €</td>
+                <td style="text-align: center">1700.00 €</td>
+                <td><span class="btn-sm btn-primary">Edita</span></td>
+                <td><span class="btn-sm btn-danger">Elimina</span></td>
+                <td><a href="#" data-toggle="modal" data-target="#post1"><span class="btn-sm btn-success"><span class="btn-sm btn-success">Detalhes</span></a></td>
+            </tr>
+            <tr>
+                <td><img src="assets/images/carregador9cm.gif" alt=""></td>
+                <td style="text-align: center">Carregador 9 centimetros micro USB MOPHIE</td>
+                <td style="text-align: center">2000.00 €</td>
+                <td style="text-align: center">1700.00 €</td>
+                <td><span class="btn-sm btn-primary">Edita</span></td>
+                <td><span class="btn-sm btn-danger">Elimina</span></td>
+                <td><a href="#" data-toggle="modal" data-target="#post1"><span class="btn-sm btn-success"><span class="btn-sm btn-success">Detalhes</span></a></td>
+            </tr>
+            <tr>
+                <td><img src="assets/images/carregadorwire.gif" alt=""></td>
+                <td style="text-align: center">Carregador MagSafe APPLE Wireless</td>
+                <td style="text-align: center">2000.00 €</td>
+                <td style="text-align: center">1700.00 €</td>
+                <td><span class="btn-sm btn-primary">Edita</span></td>
+                <td><span class="btn-sm btn-danger">Elimina</span></td>
+                <td><a href="#" data-toggle="modal" data-target="#post1"><span class="btn-sm btn-success"><span class="btn-sm btn-success">Detalhes</span></a></td>
+            </tr>
+            <tr>
+                <td><img src="assets/images/carregadorapplefast.gif" alt=""></td>
+                <td style="text-align: center">Carregador Lightning Fast Charger para iPhone(2,1A)</td>
+                <td style="text-align: center">2000.00 €</td>
+                <td style="text-align: center">1700.00 €</td>
+                <td><span class="btn-sm btn-primary">Edita</span></td>
+                <td><span class="btn-sm btn-danger">Elimina</span></td>
+                <td><a href="#" data-toggle="modal" data-target="#post1"><span class="btn-sm btn-success"><span class="btn-sm btn-success">Detalhes</span></a></td>
+            </tr>
+            <tr>
+                <td><img src="assets/images/carregadorapple1m.gif" alt=""></td>
+                <td style="text-align: center">Cabo APPLE MXLY2ZM/A (USB - Lightning - 1 m - Branco)</td>
+                <td style="text-align: center">2000.00 €</td>
+                <td style="text-align: center">1700.00 €</td>
+                <td><span class="btn-sm btn-primary">Edita</span></td>
+                <td><span class="btn-sm btn-danger">Elimina</span></td>
+                <td><a href="#" data-toggle="modal" data-target="#post1"><span class="btn-sm btn-success"><span class="btn-sm btn-success">Detalhes</span></a></td>
+            </tr>
+            <tr>
+                <td><img src="assets/images/carregadorkit.gif" alt=""></td>
+                <td style="text-align: center">Kit Carregador + cabo Micro-USB GOODIS W1-24-11 Preto</td>
+                <td style="text-align: center">2000.00 €</td>
+                <td style="text-align: center">1700.00 €</td>
+                <td><span class="btn-sm btn-primary">Edita</span></td>
+                <td><span class="btn-sm btn-danger">Elimina</span></td>
+                <td><a href="#" data-toggle="modal" data-target="#post1"><span class="btn-sm btn-success"><span class="btn-sm btn-success">Detalhes</span></a></td>
+            </tr>
 
-                    </div>
-                </div>
 
-                <br>
-            </div>
-
-            <div class="col-md-4">
-                <div class="service-item">
-                    <img src="assets/images/carregador9cm.gif" alt="">
-                    <div class="down-content">
-                        <h4>Carregador 9 centimetros micro USB MOPHIE</h4>
-                        <div style="margin-bottom:10px;">
-                  <span>
-                      <del><sup>$</sup>1999 </del> &nbsp; <sup>$</sup>1779
-                  </span>
-                        </div>
-
-                        <p></p>
-                        <a href="product-details.php" class="filled-button">Ver mais</a>
-
-                    </div>
-                </div>
-
-                <br>
-            </div>
-
-            <div class="col-md-4">
-                <div class="service-item">
-                    <img src="assets/images/carregadorwire.gif" alt="">
-                    <div class="down-content">
-                        <h4>Carregador MagSafe APPLE Wireless</h4>
-                        <div style="margin-bottom:10px;">
-                  <span>
-                      <del><sup>$</sup>1999 </del> &nbsp; <sup>$</sup>1779
-                  </span>
-                        </div>
-
-                        <p></p>
-                        <a href="product-details.php" class="filled-button">Ver mais</a>
-
-                    </div>
-                </div>
-
-                <br>
-            </div>
-
-            <div class="col-md-4">
-                <div class="service-item">
-                    <img src="assets/images/carregadorapplefast.gif" alt="">
-                    <div class="down-content">
-                        <h4>Carregador Lightning Fast Charger para iPhone(2,1A)</h4>
-                        <div style="margin-bottom:10px;">
-                  <span>
-                      <del><sup>$</sup>1999 </del> &nbsp; <sup>$</sup>1779
-                  </span>
-                        </div>
-
-                        <p></p>
-                        <a href="product-details.php" class="filled-button">Ver mais</a>
-
-                    </div>
-                </div>
-
-                <br>
-            </div>
-
-            <div class="col-md-4">
-                <div class="service-item">
-                    <img src="assets/images/carregadorapple1m.gif" alt="">
-                    <div class="down-content">
-                        <h4>Cabo APPLE MXLY2ZM/A (USB - Lightning - 1 m - Branco)</h4>
-                        <div style="margin-bottom:10px;">
-                  <span>
-                      <del><sup>$</sup>1999 </del> &nbsp; <sup>$</sup>1779
-                  </span>
-                        </div>
-
-                        <p></p>
-                        <a href="product-details.php" class="filled-button">Ver mais</a>
-
-                    </div>
-                </div>
-
-                <br>
-            </div>
-
-            <div class="col-md-4">
-                <div class="service-item">
-                    <img src="assets/images/carregadorkit.gif" alt="">
-                    <div class="down-content">
-                        <h4>Kit Carregador + cabo Micro-USB GOODIS W1-24-11 Preto</h4>
-                        <div style="margin-bottom:10px;">
-                  <span>
-                      <del><sup>$</sup>1999 </del> &nbsp; <sup>$</sup>1779
-                  </span>
-                        </div>
-
-                        <p></p>
-                        <a href="product-details.php" class="filled-button">Ver mais</a>
-
-                    </div>
-                </div>
-
-                <br>
-            </div>
-        </div>
-        </table>
+    </table>
         <br>
         <br>
 

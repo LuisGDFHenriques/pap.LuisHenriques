@@ -6,18 +6,7 @@ top();
 
 
 
-  <head>
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
-
-    <title>BRÓCOLOS STORE</title>
-
-
-  </head>
 
   <body>
 
@@ -32,7 +21,7 @@ top();
                   <h6>A qualidade é o que importa!</h6>
                   <a style="color:#FFFFFF"><h3>Deslumbre-se já com os melhores telmoveis do mercado<br>por preços super acessíveis</h3></a>
                   <p></p>
-                  <a href="products.html" class="filled-button">Produtos</a>
+                  <a href="products.php" class="filled-button">Produtos</a>
                 </div>
             </div>
           </div>
@@ -188,3 +177,4 @@ top();
       }
     </script>
   </body>
+</html>

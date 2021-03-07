@@ -16,127 +16,70 @@
             </div>
 
 <div class="services">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4">
-                <div class="service-item">
-                    <img src="assets/images/wirelessfones.gif" alt="">
-                    <div class="down-content">
-                        <h4>Auriculares Bluetooth True Wireless SAMSUNG Galaxy Buds+ (In Ear - Microfone - Branco)</h4>
-                        <div style="margin-bottom:10px;">
-                  <span>
-                      <del><sup>$</sup>1999 </del> &nbsp; <sup>$</sup>1779
-                  </span>
-                        </div>
-
-                        <p></p>
-                        <a href="product-details.php" class="filled-button">Ver mais</a>
-                    </div>
-                </div>
-
-                <br>
-            </div>
-
-            <div class="col-md-4">
-                <div class="service-item">
-                    <img src="assets/images/wirelessfonesapple.gif" alt="">
-                    <div class="down-content">
-                        <h4>AirPods 2019 Bluetooth True Wireless APPLE (In Ear - Microfone - Branco)</h4>
-                        <div style="margin-bottom:10px;">
-                  <span>
-                      <del><sup>$</sup>1999 </del> &nbsp; <sup>$</sup>1779
-                  </span>
-                        </div>
-
-                        <p></p>
-                        <a href="product-details.php" class="filled-button">Ver mais</a>
-
-                    </div>
-                </div>
-
-                <br>
-            </div>
-
-            <div class="col-md-4">
-                <div class="service-item">
-                    <img src="assets/images/fonesapple.gif" alt="">
-                    <div class="down-content">
-                        <h4>EarPods APPLE Lightning Branco</h4>
-                        <div style="margin-bottom:10px;">
-                  <span>
-                      <del><sup>$</sup>1999 </del> &nbsp; <sup>$</sup>1779
-                  </span>
-                        </div>
-
-                        <p></p>
-                        <a href="product-details.php" class="filled-button">Ver mais</a>
-
-                    </div>
-                </div>
-
-                <br>
-            </div>
-
-            <div class="col-md-4">
-                <div class="service-item">
-                    <img src="assets/images/sonyfonesfios.gif" alt="">
-                    <div class="down-content">
-                        <h4>Auriculares Com fio SONY MDR-EX15AP (In Ear - Microfone - Preto)</h4>
-                        <div style="margin-bottom:10px;">
-                  <span>
-                      <del><sup>$</sup>1999 </del> &nbsp; <sup>$</sup>1779
-                  </span>
-                        </div>
-
-                        <p></p>
-                        <a href="product-details.php" class="filled-button">Ver mais</a>
-
-                    </div>
-                </div>
-
-                <br>
-            </div>
-
-            <div class="col-md-4">
-                <div class="service-item">
-                    <img src="assets/images/jlbfios.gif" alt="">
-                    <div class="down-content">
-                        <h4>Auriculares Com fio JBL T 205 (In Ear - Microfone - Preto)</h4>
-                        <div style="margin-bottom:10px;">
-                  <span>
-                      <del><sup>$</sup>1999 </del> &nbsp; <sup>$</sup>1779
-                  </span>
-                        </div>
-
-                        <p></p>
-                        <a href="product-details.php" class="filled-button">Ver mais</a>
-
-                    </div>
-                </div>
-
-                <br>
-            </div>
-
-            <div class="col-md-4">
-                <div class="service-item">
-                    <img src="assets/images/jlbfioskit.gif" alt="">
-                    <div class="down-content">
-                        <h4>Auriculares Com fio JBL T 290 (In Ear - Microfone - Preto)</h4>
-                        <div style="margin-bottom:10px;">
-                  <span>
-                      <del><sup>$</sup>1999 </del> &nbsp; <sup>$</sup>1779
-                  </span>
-                        </div>
-
-                        <p></p>
-                        <a href="product-details.php" class="filled-button">Ver mais</a>
-
-                    </div>
-                </div>
-
-                <br>
-            </div>
-        </div>
+    <table class="table table-hover table-striped">
+        <tr>
+            <th style="text-align: center">Imagem</th>
+            <th style="text-align: center">Nome</th>
+            <th style="text-align: center">Preço Original</th>
+            <th style="text-align: center">Preço Atual</th>
+            <th colspan="3" style="text-align: center"> Opções </th>
+        </tr>
+        <tr>
+            <td><img src="assets/images/wirelessfones.gif" alt=""></td>
+            <td style="text-align: center">Auriculares Bluetooth True Wireless SAMSUNG Galaxy Buds+ (In Ear - Microfone - Branco)</td>
+            <td style="text-align: center">2000.00 €</td>
+            <td style="text-align: center">1700.00 €</td>
+            <td><span class="btn-sm btn-primary">Edita</span></td>
+            <td><span class="btn-sm btn-danger">Elimina</span></td>
+            <td><a href="#" data-toggle="modal" data-target="#post1"><span class="btn-sm btn-success"><span class="btn-sm btn-success">Detalhes</span></a></td>
+        </tr>
+        <tr>
+            <td><img src="assets/images/wirelessfonesapple.gif" alt=""></td>
+            <td style="text-align: center">AirPods 2019 Bluetooth True Wireless APPLE (In Ear - Microfone - Branco)</td>
+            <td style="text-align: center">2000.00 €</td>
+            <td style="text-align: center">1700.00 €</td>
+            <td><span class="btn-sm btn-primary">Edita</span></td>
+            <td><span class="btn-sm btn-danger">Elimina</span></td>
+            <td><a href="#" data-toggle="modal" data-target="#post1"><span class="btn-sm btn-success"><span class="btn-sm btn-success">Detalhes</span></a></td>
+        </tr>
+        <tr>
+            <td><img src="assets/images/fonesapple.gif" alt=""></td>
+            <td style="text-align: center">EarPods APPLE Lightning Branco</td>
+            <td style="text-align: center">2000.00 €</td>
+            <td style="text-align: center">1700.00 €</td>
+            <td><span class="btn-sm btn-primary">Edita</span></td>
+            <td><span class="btn-sm btn-danger">Elimina</span></td>
+            <td><a href="#" data-toggle="modal" data-target="#post1"><span class="btn-sm btn-success"><span class="btn-sm btn-success">Detalhes</span></a></td>
+        </tr>
+        <tr>
+            <td><img src="assets/images/sonyfonesfios.gif" alt=""></td>
+            <td style="text-align: center">Auriculares Com fio SONY MDR-EX15AP (In Ear - Microfone - Preto)</td>
+            <td style="text-align: center">2000.00 €</td>
+            <td style="text-align: center">1700.00 €</td>
+            <td><span class="btn-sm btn-primary">Edita</span></td>
+            <td><span class="btn-sm btn-danger">Elimina</span></td>
+            <td><a href="#" data-toggle="modal" data-target="#post1"><span class="btn-sm btn-success"><span class="btn-sm btn-success">Detalhes</span></a></td>
+        </tr>
+        <tr>
+            <td><img src="assets/images/jlbfios.gif" alt=""></td>
+            <td style="text-align: center">Auriculares Com fio JBL T 205 (In Ear - Microfone - Preto)</td>
+            <td style="text-align: center">2000.00 €</td>
+            <td style="text-align: center">1700.00 €</td>
+            <td><span class="btn-sm btn-primary">Edita</span></td>
+            <td><span class="btn-sm btn-danger">Elimina</span></td>
+            <td><a href="#" data-toggle="modal" data-target="#post1"><span class="btn-sm btn-success"><span class="btn-sm btn-success">Detalhes</span></a></td>
+        </tr>
+        <tr>
+            <td><img src="assets/images/jlbfioskit.gif" alt=""></td>
+            <td style="text-align: center">Auriculares Com fio JBL T 290 (In Ear - Microfone - Preto)</td>
+            <td style="text-align: center">2000.00 €</td>
+            <td style="text-align: center">1700.00 €</td>
+            <td><span class="btn-sm btn-primary">Edita</span></td>
+            <td><span class="btn-sm btn-danger">Elimina</span></td>
+            <td><a href="#" data-toggle="modal" data-target="#post1"><span class="btn-sm btn-success"><span class="btn-sm btn-success">Detalhes</span></a></td>
+        </tr>
+    </table>
+</div>
 
         <br>
         <br>
