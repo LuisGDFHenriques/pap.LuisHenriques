@@ -15,7 +15,7 @@ top();
             </div>
 
 <div class="services">
-
+    <span class="btn-sm btn-primary">adiciona</span>
     <table class="table table-hover table-striped">
             <tr>
                 <th style="text-align: center">Imagem</th>

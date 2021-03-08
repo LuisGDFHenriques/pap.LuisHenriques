@@ -61,7 +61,7 @@ top();
           <div class="col-md-12">
             <div class="section-heading">
               <h2>Mais<em> recentes</em></h2>
-              <span></span>
+                <span class="btn-sm btn-primary">adiciona</span>
             </div>
           </div>
             <table class="table table-hover table-striped">
@@ -111,7 +111,7 @@ top();
           <div class="col-md-12">
             <div class="section-heading">
               <h2>Mais<em> vendidas</em></h2>
-              <span></span>
+                <span class="btn-sm btn-primary">adiciona</span>
             </div>
           </div>
             <table class="table table-hover table-striped">
