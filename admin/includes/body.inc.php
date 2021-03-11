@@ -27,63 +27,47 @@ function top()
         <link rel="stylesheet" href="assets/css/fontawesome.css">
         <link rel="stylesheet" href="assets/css/style.css">
         <link rel="stylesheet" href="assets/css/owl.css">
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+
     </head>
 
     <body>
 
-    <!-- ***** Preloader Start ***** -->
-    <div id="preloader">
-        <div class="jumper">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-    </div>
-    <!-- ***** Preloader End ***** -->
 
-    <!-- Header -->
-
-
-    <header class="">
-        <nav class="navbar navbar-expand-lg">
+    <section>
             <div class="container">
-                <a class="navbar-brand" href="index.php"><h2>Brócolos Store</h2></a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
-                        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.php">Home
-                                <span class="sr-only">(current)</span>
-                            </a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="dropdown-toggle nav-link" data-toggle="dropdown" href="#" role="button"
-                               aria-haspopup="true" aria-expanded="false">Produtos</a>
+                <h2>Brócolos 2 Store - Administração</h2>
 
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item" href="products.php">Telemoveis</a>
-                                <a class="dropdown-item" href="capas.php">Capas</a>
-                                <a class="dropdown-item" href="carregadores.php">Carregadores</a>
-                                <a class="dropdown-item" href="fones.php">Fones</a>
-                            </div>
+                <div >
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item float-left">
+                            <a class="nav-link active" href="marcas.php">Marcas</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="checkout.php">Carrinho</a>
+
+                        <li class="nav-item float-left">
+                            <a class="nav-link" href="categorias.php">Categorias</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="Comparativo.php">Comparativo</a>
+                        <li class="nav-item float-left">
+                            <a class="nav-link" href="chaves.php">Chaves</a>
                         </li>
                     </ul>
                 </div>
             </div>
-        </nav>
-    </header>
+    </section>
 
 
 
+
+    <?php
+}
+
+function bottom(){
+    ?>
+
+
+    </body>
+    </html>
 
     <?php
 }
