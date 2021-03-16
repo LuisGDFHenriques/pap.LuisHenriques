@@ -51,6 +51,9 @@ function top()
                         <li class="nav-item float-left">
                             <a class="nav-link" href="chaves.php">Chaves</a>
                         </li>
+                        <li class="nav-item float-left">
+                            <a class="nav-link" href="telemoveis.php">Telemoveis</a>
+                        </li>
                     </ul>
                 </div>
             </div>

@@ -15,7 +15,6 @@ top()
                             <label for="nomeMarca"> Nome</label>
                             <input type="text" class="form-control" id="nomeMarca" name="nomeMarca">
                         </div>
-
                         <button type="submit" class="btn btn-primary">Confirma nova</button>
                     </form>
                 </div>

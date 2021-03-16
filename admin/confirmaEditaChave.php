@@ -6,5 +6,5 @@ $idCategoria=intval($_POST['chaveCategoria']);
 $sql="UPDATE chaves SET chaveNome='".$nome."', chaveCategoriaId=".$idCategoria;
 $sql.=" where chaveId=".$id;
 mysqli_query($con,$sql);
-header("location:listaChave.php");
+header("location:chaves.php");
 ?>

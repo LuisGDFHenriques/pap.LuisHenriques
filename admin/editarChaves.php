@@ -17,8 +17,8 @@ $dados=mysqli_fetch_array($result);
                     </div>
                     <form action="confirmaEditaChave.php" method="post" enctype="multipart/form-data">
                         <input type="hidden" name="chaveId" value="<?php echo $id?>">
-                        <label>Nome: </label>
-                        <input type="text" name="nomeChave" value="<?php echo $dadosChaves['chaveNome']?>"><br>
+                        <label for="nomeChave">Nome: </label>
+                        <input type="text" class="form-control" id="nomeChave" name="nomeChave" value="<?php echo $dados['chaveNome']?>"><br>
                         <select name="chaveCategoria">
                             <option value="-1">Escolha a categoria...</option>
                             <?php
@@ -28,7 +28,7 @@ $dados=mysqli_fetch_array($result);
                                 ?>
                                 <option value="<?php echo $dadosCategorias['categoriaId']?>"
                                     <?php
-                                    if($dadosChaves['chaveCategoriaId']==$dadosCategorias['categoriaId'])
+                                    if($dados['chaveCategoriaId']==$dadosCategorias['categoriaId'])
                                         echo " selected ";
                                     ?>
                                 >
@@ -38,7 +38,10 @@ $dados=mysqli_fetch_array($result);
                             }
 
                             ?>
+
                         </select>
+                        <br>
+                        <button type="submit" class="btn btn-primary">Confirma alterações</button>
                     </form>
                 </div>
             </div>

@@ -11,8 +11,8 @@ top()
 
                     </div>
                         <form action="confirmaNovaChave.php" method="post" enctype="multipart/form-data">
-                            <label>Nome: </label>
-                            <input type="text" name="nomeChave"><br>
+                            <label for="nomeChave">Nome: </label>
+                            <input type="text" class="form-control" id="nomeChave" name="nomeChave"><br>
                             <select name="chaveCategoria">
                                 <option value="-1">Escolha a categoria...</option>
                                 <?php
