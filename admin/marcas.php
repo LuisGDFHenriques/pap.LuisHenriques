@@ -34,7 +34,6 @@ top();
                     <tr>
                         <th width="5%" style="text-align: center">Id</th>
                         <th style="text-align: center">Nome</th>
-
                         <th width="15%" colspan="2" style="text-align: center"> Opções </th>
                     </tr>
                     <?php

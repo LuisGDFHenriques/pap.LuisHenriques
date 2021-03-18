@@ -10,7 +10,7 @@ top();
             url:"AJAX/AJAXGetNameTelemoveis.php",
             type:"post",
             data:{
-                idTelemoveis:id
+                idTelemovel:id
             },
             success:function (result){
                 if(confirm('Confirma que deseja eliminar o telemovel:'+result+"?"))
