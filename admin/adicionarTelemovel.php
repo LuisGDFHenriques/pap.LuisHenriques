@@ -11,7 +11,7 @@ top()
 
                     </div>
                         <form action="confirmaNovoTelemovel.php" method="post" enctype="multipart/form-data">
-                            <label for="modeloTelemovelTelemovel">Nome: </label>
+                            <label for="modeloTelemovel">Nome: </label>
                             <input type="text" class="form-control" id="modeloTelemovel" name="modeloTelemovel"><br>
                             <label for="descricaoTelemovel">Descrição: </label>
                             <input type="text" class="form-control" id="descricaoTelemovel" name="descricaoTelemovel"><br>
@@ -26,7 +26,7 @@ top()
                                 $result=mysqli_query($con,$sql);
                                 while ($dados=mysqli_fetch_array($result)){
                                     ?>
-                                    <option value="<?php echo $dados['marcaId']?>"><?php echo $dados['marcaNome']?></option>
+                                    <option id="telemovelMarca" value="<?php echo $dados['marcaId']?>"><?php echo $dados['marcaNome']?></option>
                                     <?php
                                 }
 
