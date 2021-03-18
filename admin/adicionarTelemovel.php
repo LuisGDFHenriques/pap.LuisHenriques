@@ -14,7 +14,7 @@ top()
                             <label for="modeloTelemovel">Nome: </label>
                             <input type="text" class="form-control" id="modeloTelemovel" name="modeloTelemovel"><br>
                             <label for="descricaoTelemovel">Descrição: </label>
-                            <input type="text" class="form-control" id="descricaoTelemovel" name="descricaoTelemovel"><br>
+                            <textarea id="descricaoTelemovel" class="form-control"  name="descricaoTelemovel"></textarea><br>
                             <label for="imagemTelemovel">Imagem: </label>
                             <input type="file" class="form-control" id="imagemTelemovel" name="imagemTelemovel"><br>
 
