@@ -20,10 +20,10 @@ $dados=mysqli_fetch_array($result);
                         <label for="modeloTelemovel">Nome: </label>
                         <input type="text" class="form-control" id="modeloTelemovel" name="modeloTelemovel" value="<?php echo $dados['telemovelModelo']?>"><br>
                         <label for="descricaoTelemovel">Descrição: </label>
-                        <textarea id="descricaoTelemovel" class="form-control"  name="descricaoTelemovel" value="<?php echo $dados['telemovelDecricao']?>"></textarea><br>
+                        <textarea id="descricaoTelemovel" class="form-control"  name="descricaoTelemovel" value="<?php echo $dados['telemovelDescricao']?>"></textarea><br>
 
                         <label for="imagemTelemovel">Imagem: </label>
-                        <input type="file" class="form-control" id="imagemTelemovel" name="imagemTelemovel" value="<?php echo $dados['telemovelImagem']?>"><br>
+                        <input type="file" class="form-control" id="imagemTelemovel" name="imagemTelemovel" value="<?php echo $dados['telemovelImagemURL']?>"><br>
 
 
 

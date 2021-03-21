@@ -45,9 +45,9 @@ top();
                         <tr>
                             <td><?php echo $dados['telemovelId']?></td>
                             <td><?php echo $dados['telemovelModelo']?></td>
-                            <td><?php echo $dados['telemovelImagemURL']?></td>
-                            <td><?php echo $dados['telemovelDescricao']?></td>
+                            <td><img src="../<?php echo $dados['telemovelImagemURL']?>"></td>
                             <td><?php echo $dados['marcaNome']?></td>
+                            <td><?php echo $dados['telemovelDescricao']?></td>
                             <td><a href="editarTelemoveis.php?id=<?php echo $dados['telemovelId']?>"><span class="btn-sm btn-primary">Edita</span></a></td>
                             <td><span onclick="confirmaElimina(<?php echo $dados['telemovelId']?>)" class="btn-sm btn-danger">Elimina</span></td>                        </tr>
                         <?php

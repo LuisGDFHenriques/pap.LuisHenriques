@@ -1,6 +1,10 @@
 <?php
 include_once ("includes/body.inc.php");
 top();
+
+$sql = "Select * from telemoveis where telemovelId ";
+
+$result = mysqli_query($con, $sql);
 ?>
 <!-- Page Content -->
 <div class="page-heading header-text">
@@ -30,146 +34,41 @@ top();
     </select>
 </div>
 <div class="services">
+
     <div class="container">
+
         <div class="row">
+            <?php
+            while ($dados = mysqli_fetch_array($result)){
+                ?>
             <div class="col-md-4">
                 <div class="service-item">
-                    <img src="assets/images/SAMSUNGZFOLD2.jpg" alt="">
+                    <img src="<?php echo $dados['telemovelImagemURL']?>" alt="">
                     <div class="down-content">
-                        <h4>Samsung Z Fold2</h4>
+                        <h4><?php echo $dados['telemovelModelo']?></h4>
                         <div style="margin-bottom:10px;">
                   <span>
                       <del><sup>$</sup>1999 </del> &nbsp; <sup>$</sup>1779
                   </span>
                         </div>
 
-                        <p></p>
+                        <p><?php echo $dados['telemovelDescricao']?></p>
                         <a href="product-details.php" class="filled-button">Ver mais</a>
                         <br>
                         <input type="checkbox"><a class=""> Favoritos</a>
                         <br>
                         <input type="checkbox"><a class=""> Comparar</a>
-                    </div>
+                         </div>
+
                 </div>
 
                 <br>
             </div>
-
-            <div class="col-md-4">
-                <div class="service-item">
-                    <img src="assets/images/IPHONE8.gif" alt="">
-                    <div class="down-content">
-                        <h4>Iphone 8</h4>
-                        <div style="margin-bottom:10px;">
-                  <span>
-                      <del><sup>$</sup>1999 </del> &nbsp; <sup>$</sup>1779
-                  </span>
-                        </div>
-
-                        <p></p>
-                        <a href="product-details.php" class="filled-button">Ver mais</a>
-                        <br>
-                        <input type="checkbox"><a class=""> Favoritos</a>
-                        <br>
-                        <input type="checkbox"><a class=""> Comparar</a>
-                    </div>
-                </div>
-
-                <br>
-            </div>
-
-            <div class="col-md-4">
-                <div class="service-item">
-                    <img src="assets/images/Iphonex.jpg" alt="">
-                    <div class="down-content">
-                        <h4>Iphone X</h4>
-                        <div style="margin-bottom:10px;">
-                  <span>
-                      <del><sup>$</sup>1999 </del> &nbsp; <sup>$</sup>1779
-                  </span>
-                        </div>
-
-                        <p></p>
-                        <a href="product-details.php" class="filled-button">Ver mais</a>
-                        <br>
-                        <input type="checkbox"><a class=""> Favoritos</a>
-                        <br>
-                        <input type="checkbox"><a class=""> Comparar</a>
-                    </div>
-                </div>
-
-                <br>
-            </div>
-
-            <div class="col-md-4">
-                <div class="service-item">
-                    <img src="assets/images/Iphone11.jpg" alt="">
-                    <div class="down-content">
-                        <h4>Iphone 11</h4>
-                        <div style="margin-bottom:10px;">
-                  <span>
-                      <del><sup>$</sup>1999 </del> &nbsp; <sup>$</sup>1779
-                  </span>
-                        </div>
-
-                        <p></p>
-                        <a href="product-details.php" class="filled-button">Ver mais</a>
-                        <br>
-                        <input type="checkbox"><a class=""> Favoritos</a>
-                        <br>
-                        <input type="checkbox"><a class=""> Comparar</a>
-                    </div>
-                </div>
-
-                <br>
-            </div>
-
-            <div class="col-md-4">
-                <div class="service-item">
-                    <img src="assets/images/Iphone12.jpg" alt="">
-                    <div class="down-content">
-                        <h4>Iphone 12</h4>
-                        <div style="margin-bottom:10px;">
-                  <span>
-                      <del><sup>$</sup>1999 </del> &nbsp; <sup>$</sup>1779
-                  </span>
-                        </div>
-
-                        <p></p>
-                        <a href="product-details.php" class="filled-button">Ver mais</a>
-                        <br>
-                        <input type="checkbox"><a class=""> Favoritos</a>
-                        <br>
-                        <input type="checkbox"><a class=""> Comparar</a>
-                    </div>
-                </div>
-
-                <br>
-            </div>
-
-            <div class="col-md-4">
-                <div class="service-item">
-                    <img src="assets/images/IPHONE7.gif" alt="">
-                    <div class="down-content">
-                        <h4>Iphone 7</h4>
-                        <div style="margin-bottom:10px;">
-                  <span>
-                      <del><sup>$</sup>1999 </del> &nbsp; <sup>$</sup>1779
-                  </span>
-                        </div>
-
-                        <p></p>
-                        <a href="product-details.php" class="filled-button">Ver mais</a>
-                        <br>
-                        <input type="checkbox"><a class=""> Favoritos</a>
-                        <br>
-                        <input type="checkbox"><a class=""> Comparar</a>
-                    </div>
-                </div>
-
-                <br>
-            </div>
+            <?php
+                }
+                ?>
         </div>
+
 
         <br>
         <br>

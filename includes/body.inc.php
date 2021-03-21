@@ -1,5 +1,7 @@
 <?php
-
+include_once("config.inc.php");
+$con=mysqli_connect(HOST,USER,PWD,DATABASE);
+$con->set_charset("utf8");
 
 function top()
 {
@@ -15,7 +17,6 @@ function top()
     <meta name="author" content="">
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap"
           rel="stylesheet">
-
     <title>PHPJabbers.com | Free Mobile Store Website Template</title>
 
     <!-- Bootstrap core CSS -->
