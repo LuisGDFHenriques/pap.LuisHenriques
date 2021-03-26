@@ -25,7 +25,7 @@ top();
                   <h6>Descubra mais sobre nós!</h6>
                   <a style="color:#FFFFFF"><h3>Obtenha mais informações sobre o nosso site<br></h3></a>
                   <p></p>
-                  <a href="about.html" class="filled-button">Sobre Nós</a>
+                  <a href="about.php" class="filled-button">Sobre Nós</a>
                 </div>
             </div>
           </div>

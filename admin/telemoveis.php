@@ -37,7 +37,7 @@ top();
                         <th>Imagem</th>
                         <th>Marcas</th>
                         <th>Descrição</th>
-                        <th width="15%" colspan="2" style="text-align: center">opções</th>
+                        <th width="15%" colspan="3" style="text-align: center">opções</th>
                     </tr>
                     <?php
                     while($dados=mysqli_fetch_array($result)){
@@ -49,7 +49,9 @@ top();
                             <td><?php echo $dados['marcaNome']?></td>
                             <td><?php echo $dados['telemovelDescricao']?></td>
                             <td><a href="editarTelemoveis.php?id=<?php echo $dados['telemovelId']?>"><span class="btn-sm btn-primary">Edita</span></a></td>
-                            <td><span onclick="confirmaElimina(<?php echo $dados['telemovelId']?>)" class="btn-sm btn-danger">Elimina</span></td>                        </tr>
+                            <td><span onclick="confirmaElimina(<?php echo $dados['telemovelId']?>)" class="btn-sm btn-danger">Elimina</span></td>
+                            <td><a href="telemoveisChave.php?id=<?php echo $dados['telemovelId']?>"><span class="btn-sm btn-primary">Detalhes</span></a></td>
+                        </tr>
                         <?php
                     }
                     ?>
