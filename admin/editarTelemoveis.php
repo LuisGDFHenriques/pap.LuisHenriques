@@ -3,7 +3,7 @@ include_once ("includes/body.inc.php");
 top();
 
 $id=intval($_GET['id']);
-$sql="Select * from telemoveis inner join marcas on telemovelMarcaId = marcaId";
+$sql="Select * from telemoveis inner join marcas on telemovelMarcaId = marcaId where telemovelId=$id";
 $result=mysqli_query($con,$sql);
 $dados=mysqli_fetch_array($result);
 
