@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/admin/adicionarCategoriaChaves.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/admin/adicionarCategorias.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/admin/adicionarChave.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/admin/adicionarMarca.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/admin/adicionarTelemovel.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/admin/adicionarTelemovelChave.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/admin/categoriaChaves.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/admin/categorias.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/admin/chaves.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/admin/editarCategoriaChave.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/admin/editarCategorias.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/admin/editarChaves.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/admin/editarMarca.php" charset="UTF-8" />

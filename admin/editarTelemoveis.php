@@ -16,18 +16,16 @@ $dados=mysqli_fetch_array($result);
                         <h2>Editar<em> Telemovel</em></h2>
                     </div>
                     <form action="confirmaEditaTelemovel.php" method="post" enctype="multipart/form-data">
-                        <input type="hidden" name="chaveId" value="<?php echo $id?>">
+                        <input type="hidden" name="telemovelId" value="<?php echo $id?>">
                         <label for="modeloTelemovel">Nome: </label>
                         <input type="text" class="form-control" id="modeloTelemovel" name="modeloTelemovel" value="<?php echo $dados['telemovelModelo']?>"><br>
                         <label for="descricaoTelemovel">Descrição: </label>
-                        <textarea id="descricaoTelemovel" class="form-control"  name="descricaoTelemovel" value="<?php echo $dados['telemovelDescricao']?>"></textarea><br>
-
+                        <textarea class="form-control" id="descricaoTelemovel" name="descricaoTelemovel"><?php echo $dados['telemovelDescricao']?></textarea><br>
+                        <img src="../<?php echo $dados['telemovelImagemURL']?>" width="200">
                         <label for="imagemTelemovel">Imagem: </label>
-                        <input type="file" class="form-control" id="imagemTelemovel" name="imagemTelemovel" value="<?php echo $dados['telemovelImagemURL']?>"><br>
-
-
-
-
+                        <input type="file" id="imagemTelemovel" name="imagemTelemovel"><br>
+                        <br>
+                        <br>
                         <select name="telemovelMarca">
                             <option value="-1">Escolha a marca...</option>
                             <?php
@@ -49,6 +47,7 @@ $dados=mysqli_fetch_array($result);
                             ?>
 
                         </select>
+                        <br>
                         <br>
                         <button type="submit" class="btn btn-primary">Confirma alterações</button>
                     </form>

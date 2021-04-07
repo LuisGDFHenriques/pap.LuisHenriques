@@ -28,66 +28,54 @@ top();
 </script>
 <div class="container">
     <div class="services">
-    <table class='table table-striped' width="100%">
-        <tr>
-            <th width="5%" style="text-align: center">Id</th>
-            <th>Telemovel</th>
-            <th>Telemovel</th>
-            <th>Telemovel</th>
-            <th>Descrição</th>
-            <th width="15%" colspan="2" style="text-align: center">opções</th>
-        </tr>
-        <?php
-        ($dados=mysqli_fetch_array($resulttele))
-            ?>
-            <tr>
-                <td><?php echo $dados['telemovelId']?></td>
-                <td><?php echo $dados['telemovelModelo']?></td>
-                <td><img src="../<?php echo $dados['telemovelImagemURL']?>"></td>
-                <td><?php echo $dados['marcaNome']?></td>
-                <td><?php echo $dados['telemovelDescricao']?></td>
-                <td><span onclick="confirmaElimina(<?php echo $dados['telemovelId']?>)" class="btn-sm btn-danger">Elimina</span></td>
-            </tr>
-            <?php
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-heading">
+                    <h2><em>telemoveisChave</em></h2>
 
-        ?>
-    </div>
-</div>
-
-<div class="container">
-    <div class="services">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="section-heading">
-                        <h2>Lista<em> TelemoveisChave</em></h2>
-                        <a href="confirmaNovoTelemovelChave.php" ><span class="btn-sm btn-primary">adiciona</span></a>
-                    </div>
                 </div>
-                <table class='table table-striped' width="100%">
-                    <tr>
-                        <th width="5%" style="text-align: center">Id</th>
-                        <th>Telemovel</th>
-                        <th>Descrição</th>
-                        <th width="15%" colspan="2" style="text-align: center">opções</th>
-                    </tr>
-                    <?php
-                    while($dados=mysqli_fetch_array($result)){
-                        ?>
-                        <tr>
-                            <td><?php echo $dados['telemovelId']?></td>
-                            <td><?php echo $dados['telemovelDescricao']?></td>
-                            <td><span onclick="confirmaElimina(<?php echo $dados['telemovelId']?>)" class="btn-sm btn-danger">Elimina</span></td>
-                        </tr>
-                        <?php
-                    }
-                    ?>
+                <form action="" method="post" enctype="multipart/form-data">
+        <label>CategoriaChave:</label><br>
+        <select name="chaveCategoria">
+            <option value="-1">Escolha a categoriaChave...</option>
+            <?php
+            $sql="select * from categoriachaves order by categoriaChaveNome";
+            $result=mysqli_query($con,$sql);
+            while ($dados=mysqli_fetch_array($result)){
+                ?>
+                <option value="<?php echo $dados['categoriaChaveId']?>"><?php echo $dados['categoriaChaveNome']?></option>
+                <?php
+            }
 
-                    </table>
+            ?>
+        </select>
+        <br>
+        <br>
+
+        <label>Chave:</label><br>
+        <select name="chaveCategoria">
+            <option value="-1">Escolha a categoriaChave...</option>
+            <?php
+            $sql="select * from categoriachaves order by categoriaChaveNome";
+            $result=mysqli_query($con,$sql);
+            while ($dados=mysqli_fetch_array($result)){
+                ?>
+                <option value="<?php echo $dados['categoriaChaveId']?>"><?php echo $dados['categoriaChaveNome']?></option>
+                <?php
+            }
+
+            ?>
+        </select>
+                <br>
+                <br>
+                <label>Valor</label><br>
+                <input type="text" name="valor" class="w-25 "><br>
+                    <br>
+                    <button type="submit" class="btn btn-primary">Confirma nova</button>
+                </form>
             </div>
         </div>
-
-
+    </div>
 </div>
 <?php
 bottom();

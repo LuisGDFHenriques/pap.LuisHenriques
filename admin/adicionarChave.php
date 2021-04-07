@@ -14,13 +14,13 @@ top()
                             <label for="nomeChave">Nome: </label>
                             <input type="text" class="form-control" id="nomeChave" name="nomeChave"><br>
                             <select name="chaveCategoria">
-                                <option value="-1">Escolha a categoria...</option>
+                                <option value="-1">Escolha a categoriaChave...</option>
                                 <?php
-                                $sql="select * from categorias order by categoriaNome";
+                                $sql="select * from categoriachaves order by categoriaChaveNome";
                                 $result=mysqli_query($con,$sql);
                                 while ($dados=mysqli_fetch_array($result)){
                                     ?>
-                                    <option value="<?php echo $dados['categoriaId']?>"><?php echo $dados['categoriaNome']?></option>
+                                    <option value="<?php echo $dados['categoriaChaveId']?>"><?php echo $dados['categoriaChaveNome']?></option>
                                     <?php
                                 }
 
