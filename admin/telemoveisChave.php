@@ -4,10 +4,6 @@ $id=intval($_GET['id']);
 
 $sql="Select * from telemovelchave inner join telemoveis on  telemovelChaveTelemovelId = telemovelId inner join chaves on telemovelChaveChaveId = chaveId";
 $result=mysqli_query($con,$sql);
-
-$sqltele="Select * from telemoveis inner join marcas on telemovelMarcaId = marcaId where telemovelId=".$id;
-$resulttele=mysqli_query($con,$sqltele);
-
 top();
 ?>
 <script>
@@ -34,7 +30,7 @@ top();
                     <h2><em>telemoveisChave</em></h2>
 
                 </div>
-                <form action="" method="post" enctype="multipart/form-data">
+                <form action="confirmaNovaTelemoveisChave.php" method="post" enctype="multipart/form-data">
         <label>CategoriaChave:</label><br>
         <select name="chaveCategoria">
             <option value="-1">Escolha a categoriaChave...</option>
@@ -53,14 +49,14 @@ top();
         <br>
 
         <label>Chave:</label><br>
-        <select name="chaveCategoria">
-            <option value="-1">Escolha a categoriaChave...</option>
+        <select name="chave">
+            <option value="-1">Escolha a chave...</option>
             <?php
-            $sql="select * from categoriachaves order by categoriaChaveNome";
+            $sql="select * from chaves order by chaveNome";
             $result=mysqli_query($con,$sql);
             while ($dados=mysqli_fetch_array($result)){
                 ?>
-                <option value="<?php echo $dados['categoriaChaveId']?>"><?php echo $dados['categoriaChaveNome']?></option>
+                <option value="<?php echo $dados['chaveId']?>"><?php echo $dados['chaveNome']?></option>
                 <?php
             }
 

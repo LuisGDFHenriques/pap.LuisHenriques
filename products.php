@@ -3,7 +3,6 @@ include_once ("includes/body.inc.php");
 top();
 
 $sql = "Select * from telemoveis where telemovelId ";
-
 $result = mysqli_query($con, $sql);
 ?>
 <!-- Page Content -->
@@ -28,9 +27,18 @@ $result = mysqli_query($con, $sql);
         <option value="filter_float_price:desc">Maior numero de favoritos</option>
     </select>
     <a>Marca:</a>
-    <select>
-        <option selected="selected" value="created_at:desc">IPHONE</option>
-        <option value="filter_float_price:asc">Samsung</option>
+    <select name="telemovelMarca">
+        <option value="-1">Escolha a marca...</option>
+        <?php
+        $sqlM="select * from marcas order by marcaNome";
+        $resultmarca=mysqli_query($con,$sqlM);
+        while ($dadosmarca=mysqli_fetch_array($resultmarca)){
+            ?>
+            <option id="telemovelMarca" value="<?php echo $dadosmarca['marcaId']?>"><?php echo $dadosmarca['marcaNome']?></option>
+            <?php
+        }
+
+        ?>
     </select>
 </div>
 <div class="services">
@@ -72,26 +80,6 @@ $result = mysqli_query($con, $sql);
 
         <br>
         <br>
-
-        <nav>
-            <ul class="pagination pagination-lg justify-content-center">
-                <li class="page-item">
-                    <a class="page-link" href="#" aria-label="Previous">
-                        <span aria-hidden="true">«</span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                </li>
-                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                <li class="page-item">
-                    <a class="page-link" href="#" aria-label="Next">
-                        <span aria-hidden="true">»</span>
-                        <span class="sr-only">Next</span>
-                    </a>
-                </li>
-            </ul>
-        </nav>
 
         <br>
         <br>
