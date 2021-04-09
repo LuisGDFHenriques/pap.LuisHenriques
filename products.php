@@ -2,8 +2,6 @@
 include_once ("includes/body.inc.php");
 top();
 
-$sql = "Select * from telemoveis where telemovelId ";
-$result = mysqli_query($con, $sql);
 ?>
 <!-- Page Content -->
 <div class="page-heading header-text">
@@ -18,7 +16,7 @@ $result = mysqli_query($con, $sql);
 </div>
 <div align="center">
     <a>Pesquisar</a>
-    <input autocomplete="on" id="search-text" type="text" value="" defaultval="Pesquisar..." style="margin: 0px;">
+    <input autocomplete="on" id="search" type="text" value="" defaultval="Pesquisar..." style="margin: 0px;">
     <a>Ordenar por:</a>
     <select>
         <option selected="selected" value="created_at:desc">Mais recente</option>
@@ -45,36 +43,8 @@ $result = mysqli_query($con, $sql);
 
     <div class="container">
 
-        <div class="row">
-            <?php
-            while ($dados = mysqli_fetch_array($result)){
-                ?>
-            <div class="col-md-4">
-                <div class="service-item">
-                    <img src="<?php echo $dados['telemovelImagemURL']?>" alt="">
-                    <div class="down-content">
-                        <h4><?php echo $dados['telemovelModelo']?></h4>
-                        <div style="margin-bottom:10px;">
-                  <span>
-                      <del><sup>$</sup>1999 </del> &nbsp; <sup>$</sup>1779
-                  </span>
-                        </div>
+        <div class="row" id="tableContent">
 
-                        <p><?php echo $dados['telemovelDescricao']?></p>
-                        <a href="product-details.php" class="filled-button">Ver mais</a>
-                        <br>
-                        <input type="checkbox"><a class=""> Favoritos</a>
-                        <br>
-                        <input type="checkbox"><a class=""> Comparar</a>
-                         </div>
-
-                </div>
-
-                <br>
-            </div>
-            <?php
-                }
-                ?>
         </div>
 
 
@@ -157,27 +127,10 @@ $result = mysqli_query($con, $sql);
     </div>
 </div>
 
+<?php
+    bot(TELEMOVEIS);
 
-<!-- Bootstrap core JavaScript -->
-<script src="vendor/jquery/jquery.min.js"></script>
-<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-<!-- Additional Scripts -->
-<script src="assets/js/custom.js"></script>
-<script src="assets/js/owl.js"></script>
-<script src="assets/js/slick.js"></script>
-<script src="assets/js/accordions.js"></script>
-
-<script language="text/Javascript">
-    cleared[0] = cleared[1] = cleared[2] = 0; //set a cleared flag for each field
-    function clearField(t) {                   //declaring the array outside of the
-        if (!cleared[t.id]) {                      // function makes it static and global
-            cleared[t.id] = 1;  // you could use true and false, but that's more typing
-            t.value = '';         // with more chance of typos
-            t.style.color = '#fff';
-        }
-    }
-</script>
+?>
 
 </body>
 </html>
