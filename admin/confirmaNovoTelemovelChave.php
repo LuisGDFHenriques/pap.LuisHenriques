@@ -1,14 +1,13 @@
 <?php
 include_once ("includes/body.inc.php");
-print_r($_FILES);
-$modelo=addslashes($_POST['modeloTelemovel']);
-$descricao=addslashes($_POST['descricaoTelemovel']);
-$idMar=intval($_POST['telemovelMarca']);
-$imagem=$_FILES['imagemTelemovel']['name'];
-$novoNome="images/".$imagem;
 
-copy($_FILES['imagemTelemovel']['tmp_name'],"../".$novoNome);
-$sql="insert into telemoveis(telemovelModelo, telemovelMarcaId, telemovelImagemURL, telemovelDescricao) values('".$modelo."',".$idMar.",'".$novoNome."','".$descricao."');";
+
+$chave=intval($_POST['chaveChaveTelemovel']);
+$produto=intval($_POST['telemovelChaveTelemovel']);
+$valor=addslashes($_POST['valorChaveTelemovel']);
+
+$sql="insert into telemovelchaves(telemovelChaveChaveId, telemovelChaveTelemovelId, telemovelChaveValor) values(".$chave.",".$produto.",'".$valor."');";
 mysqli_query($con,$sql);
-header("location:telemoveis.php");
+header("location:telemoveisChave.php?id=$produto");
+
 ?>
