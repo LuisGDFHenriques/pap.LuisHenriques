@@ -1,26 +1,24 @@
 <?php
 include_once("includes/body.inc.php");
 $id=intval($_GET['id']);
-
-
 top();
 ?>
-<script>
-    function confirmaElimina(id) {
-        $.ajax({
-            url:"AJAX/AJAXGetNameTelemoveisChaves.php",
-            type:"post",
-            data:{
-                idTelemovelChave:id
-            },
-            success:function (result){
-                if(confirm('Confirma que deseja eliminar o telemovelChave:'+result+"?"))
-                    window.location="eliminaTelemoveisChaves.php?id=" + id;
-            }
-        })
-    };
+    <script>
+        function confirmaElimina(id) {
+            $.ajax({
+                url:"AJAX/AJAXGetNameTelemoveisChaves.php",
+                type:"post",
+                data:{
+                    idTelemovelChave:id
+                },
+                success:function (result){
+                    if(confirm('Confirma que deseja eliminar o telemovelChave:'+result+"?"))
+                        window.location="eliminaTelemoveisChaves.php?id=" + id;
+                }
+            })
+        };
 
-</script>
+    </script>
 <div class="container">
     <div class="services">
         <div class="row">
@@ -56,7 +54,7 @@ top();
                     <input type="text" name="valorChaveTelemovel" class="w-50 p-3"><br>
                     <br>
                     <div class="container">
-                        <input type="Submit" value="Adicionar">
+                        <button type="submit" class="btn btn-primary">Confirma alterações</button>
                         <table class='table table-striped' width="100%">
 
                             <tr>
@@ -66,17 +64,20 @@ top();
                                 <th colspan="2">opções</th>
                             </tr>
                             <?php
-                            $sqlT="Select * from telemoveischaves inner join chaves on chaveId=telemovelChaveChaveId inner join categoriaChaves on categoriaChaveId = chaveCategoriaChaveId where telemovelChaveTelemovelId=".$id;
-                            $resultT=mysqli_query($con,$sqlT);
-                            while($dadosT=mysqli_fetch_array($resultT)){
+                            $sql="Select * from telemovelchaves 
+                                    inner join chaves on chaveId=telemovelChaveChaveId
+                                    inner join categoriachaves on categoriaChaveId = chaveCategoriaChaveId 
+                                    where telemovelChaveTelemovelId=".$id;
+                            $result=mysqli_query($con,$sql);
+                            while($dados=mysqli_fetch_array($result)){
                                 ?>
 
                                 <tr>
-                                    <td><?php echo $dadosT['categoriaChaveNome']?></td>
-                                    <td><?php echo $dadosT['chaveNome']?></td>
-                                    <td><?php echo $dadosT['telemovelChaveValor']?></td>
+                                    <td><?php echo $dados['categoriaChaveNome']?></td>
+                                    <td><?php echo $dados['chaveNome']?></td>
+                                    <td><?php echo $dados['telemovelChaveValor']?></td>
 
-                                    <td><a class='btn btn-danger btn-xs' href="#" onclick="confirmaElimina(<?php echo $dados['chaveId']?>);"> <i class='fa fa-trash'></i>Eliminar</a></td>
+                                    <td><a class='btn btn-danger btn-xs' href="eliminaTelemoveisChaves.php" onclick="confirmaElimina(<?php echo $dados['chaveId']?>);"> <i class='fa fa-trash'></i>Eliminar</a></td>
 
                                 </tr>
                                 <?php
