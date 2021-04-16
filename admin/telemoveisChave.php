@@ -3,22 +3,7 @@ include_once("includes/body.inc.php");
 $id=intval($_GET['id']);
 top();
 ?>
-    <script>
-        function confirmaElimina(id) {
-            $.ajax({
-                url:"AJAX/AJAXGetNameTelemoveisChaves.php",
-                type:"post",
-                data:{
-                    idTelemovelChave:id
-                },
-                success:function (result){
-                    if(confirm('Confirma que deseja eliminar o telemovelChave:'+result+"?"))
-                        window.location="eliminaTelemoveisChaves.php?id=" + id;
-                }
-            })
-        };
 
-    </script>
 <div class="container">
     <div class="services">
         <div class="row">
@@ -77,7 +62,7 @@ top();
                                     <td><?php echo $dados['chaveNome']?></td>
                                     <td><?php echo $dados['telemovelChaveValor']?></td>
 
-                                    <td><a class='btn btn-danger btn-xs' href="eliminaTelemoveisChaves.php" onclick="confirmaElimina(<?php echo $dados['chaveId']?>);"> <i class='fa fa-trash'></i>Eliminar</a></td>
+                                    <td><a class='btn btn-danger btn-xs' href="" onclick="confirmaElimina(<?php echo $dados['chaveId']?>);"> <i class='fa fa-trash'></i>Eliminar</a></td>
 
                                 </tr>
                                 <?php

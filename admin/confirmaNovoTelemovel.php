@@ -1,5 +1,6 @@
 <?php
 include_once ("includes/body.inc.php");
+
 print_r($_FILES);
 $modelo=addslashes($_POST['modeloTelemovel']);
 $descricao=addslashes($_POST['descricaoTelemovel']);

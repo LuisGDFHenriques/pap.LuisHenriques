@@ -1,7 +1,8 @@
 <?php
 include_once ("includes/body.inc.php");
 top();
-
+$sql = "Select * from telemoveis where telemovelId";
+$result = mysqli_query($con, $sql);
 ?>
 <!-- Page Content -->
 <div class="page-heading header-text">
@@ -40,17 +41,42 @@ top();
     </select>
 </div>
 <div class="services">
-
     <div class="container">
+        <div class="row">
+            <?php
+            while ($dados = mysqli_fetch_array($result)){
+                ?>
+                <div class="col-md-4">
+                    <div class="service-item">
+                        <img src="<?php echo $dados['telemovelImagemURL']?>" alt="">
+                        <div class="down-content">
+                            <h4><?php echo $dados['telemovelModelo']?></h4>
+                            <div style="margin-bottom:10px;">
+                  <span>
+                      <del><sup>$</sup>1999 </del> &nbsp; <sup>$</sup>1779
+                  </span>
+                            </div>
 
-        <div class="row" id="tableContent">
+                            <p></p>
+                            <a href="product-details.php?id=<?php echo $dados['telemovelId']?>" class="filled-button">Ver mais</a>
+                            <br>
+                            <input type="checkbox"><a class=""> Favoritos</a>
+                            <br>
+                            <input type="checkbox"><a class=""> Comparar</a>
+                        </div>
 
+                    </div>
+
+                    <br>
+                </div>
+
+
+                <?php
+            }
+            ?>
         </div>
-
-
         <br>
         <br>
-
         <br>
         <br>
         <br>
