@@ -10,7 +10,6 @@ $result = mysqli_query($con, $sql);
         <div class="row">
             <div class="col-md-12">
                 <h1>Produtos</h1>
-
             </div>
         </div>
     </div>
@@ -26,7 +25,7 @@ $result = mysqli_query($con, $sql);
         <option value="filter_float_price:desc">Maior numero de favoritos</option>
     </select>
     <a>Marca:</a>
-    <select name="telemovelMarca">
+    <select name="telemovelMarca" id="searchMarca">
         <option value="-1">Escolha a marca...</option>
         <?php
         $sqlM="select * from marcas order by marcaNome";
@@ -42,38 +41,8 @@ $result = mysqli_query($con, $sql);
 </div>
 <div class="services">
     <div class="container">
-        <div class="row">
-            <?php
-            while ($dados = mysqli_fetch_array($result)){
-                ?>
-                <div class="col-md-4">
-                    <div class="service-item">
-                        <img src="<?php echo $dados['telemovelImagemURL']?>" alt="">
-                        <div class="down-content">
-                            <h4><?php echo $dados['telemovelModelo']?></h4>
-                            <div style="margin-bottom:10px;">
-                  <span>
-                      <del><sup>$</sup>1999 </del> &nbsp; <sup>$</sup>1779
-                  </span>
-                            </div>
+        <div class="row" id="tableContent">
 
-                            <p></p>
-                            <a href="product-details.php?id=<?php echo $dados['telemovelId']?>" class="filled-button">Ver mais</a>
-                            <br>
-                            <input type="checkbox"><a class=""> Favoritos</a>
-                            <br>
-                            <input type="checkbox"><a class=""> Comparar</a>
-                        </div>
-
-                    </div>
-
-                    <br>
-                </div>
-
-
-                <?php
-            }
-            ?>
         </div>
         <br>
         <br>
@@ -125,14 +94,12 @@ $result = mysqli_query($con, $sql);
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLabel">Registar</h5>
-
             </div>
             <div class="modal-body">
                 <form>
                     <div class="form-group">
                         <label for="InputName">Nome:</label>
                         <input type="name" class="form-control" id="InputName" aria-describedby="emailHelp">
-
                     </div>
                     <div class="form-group">
                         <label for="InputEmail">E-mail:</label>
@@ -141,7 +108,6 @@ $result = mysqli_query($con, $sql);
                     <div class="form-group">
                         <label for="InputPassword1">Palavra-passe</label>
                         <input type="password" class="form-control" id="InputPassword1">
-
                     </div>
                 </form>
             </div>
@@ -155,7 +121,6 @@ $result = mysqli_query($con, $sql);
 
 <?php
     bot(TELEMOVEIS);
-
 ?>
 
 </body>

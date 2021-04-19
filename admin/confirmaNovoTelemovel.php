@@ -3,7 +3,7 @@ include_once ("includes/body.inc.php");
 
 print_r($_FILES);
 $modelo=addslashes($_POST['modeloTelemovel']);
-$descricao=addslashes($_POST['descricaoTelemovel']);
+$descricao=addslashes($_POST['reviewTexto']);
 $idMar=intval($_POST['telemovelMarca']);
 $imagem=$_FILES['imagemTelemovel']['name'];
 $novoNome="images/".$imagem;

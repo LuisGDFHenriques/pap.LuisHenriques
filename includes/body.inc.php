@@ -99,7 +99,7 @@ function top()
 
 
 
-function bot($menu=HOME)
+function bot($menu=HOME, $id=0)
 {
 ?>
     <script src="vendor/jquery/jquery.min.js"></script>
@@ -112,12 +112,12 @@ function bot($menu=HOME)
 <script src="assets/js/accordions.js"></script>
 <script src="js/common.js"></script>
 <script language="text/Javascript">
-    cleared[0] = cleared[1] = cleared[2] = 0; //set a cleared flag for each field
-    function clearField(t) {                   //declaring the array outside of the
-        if (!cleared[t.id]) {                      // function makes it static and global
-            cleared[t.id] = 1;  // you could use true and false, but that's more typing
-            t.value = '';         // with more chance of typos
-            t.style.color = '#fff';
+    cleared[0] = cleared[1] = cleared[2] = 0;
+    function clearField(t) {
+        if (!cleared[t.id]) {
+            cleared[t.id] = 1;
+            t.value = '';
+            t.style.color = '#ffffff';
         }
     }
 </script>
@@ -128,7 +128,10 @@ function bot($menu=HOME)
             if ($menu == TELEMOVEIS){
             ?>
             $('#search').keyup(function () {
-                fillTableTelemoveis(this.value);
+                fillTableTelemoveis(this.value, $('#searchMarca'). val());
+            });
+            $('#searchMarca').change(function () {
+                fillTableTelemoveis($('#search'). val(), this.value);
             });
             fillTableTelemoveis();
             <?php
