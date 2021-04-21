@@ -1,5 +1,6 @@
 <?php
 include_once ("includes/body.inc.php");
+
 $nome=addslashes($_POST['nomeChave']);
 $id=intval($_POST['chaveId']);
 $idCategoria=intval($_POST['chaveCategoria']);
