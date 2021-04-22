@@ -75,6 +75,8 @@ top();
                         <form action="confirmaNovoTelemovel.php" method="post" enctype="multipart/form-data">
                             <label for="modeloTelemovel">Nome: </label>
                             <input type="text" class="form-control" id="modeloTelemovel" name="modeloTelemovel"><br>
+                            <label for="preco">Preço: </label>
+                            <input type="number" class="form-control" id="preco" name="preco"><br>
                             <label for="descricaoTelemovel">Descrição: </label>
                             <textarea name="reviewTexto" id="myTextarea" ></textarea><br>
                             <label for="imagemTelemovel">Imagem: </label>

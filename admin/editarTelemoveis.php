@@ -3,7 +3,7 @@ include_once ("includes/body.inc.php");
 top();
 
 $id=intval($_GET['id']);
-$sql="Select * from telemoveis inner join marcas on telemovelMarcaId = marcaId ";
+$sql="Select * from telemoveis inner join marcas on telemovelMarcaId = marcaId where telemovelId=".$id;
 $result=mysqli_query($con,$sql);
 $dados=mysqli_fetch_array($result);
 
@@ -81,6 +81,8 @@ $dados=mysqli_fetch_array($result);
                         <input type="hidden" name="telemovelId" value="<?php echo $id?>">
                         <label for="modeloTelemovel">Nome: </label>
                         <input type="text" class="form-control" id="modeloTelemovel" name="modeloTelemovel" value="<?php echo $dados['telemovelModelo']?>"><br>
+                        <label for="preco">Preco:</label>
+                        <input type="number" class="form-control" id="preco" name="preco" value="<?php echo $dados['telemovelPreco']?>"><br>
                         <label for="myTextarea">Descrição: </label>
                         <textarea class="form-control" id="myTextarea" name="reviewTexto"><?php echo $dados['telemovelDescricao']?></textarea><br>
                         <img src="../<?php echo $dados['telemovelImagemURL']?>" width="200">

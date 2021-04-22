@@ -34,6 +34,7 @@ top();
                     <tr>
                         <th width="5%" style="text-align: center">Id</th>
                         <th>Nome</th>
+                        <th>Preço</th>
                         <th>Imagem</th>
                         <th>Marcas</th>
                         <th>Descrição</th>
@@ -45,6 +46,7 @@ top();
                         <tr>
                             <td><?php echo $dados['telemovelId']?></td>
                             <td><?php echo $dados['telemovelModelo']?></td>
+                            <td><?php echo $dados['telemovelPreco']?></td>
                             <td><img src="../<?php echo $dados['telemovelImagemURL']?>"></td>
                             <td><?php echo $dados['marcaNome']?></td>
                             <td><?php echo $dados['telemovelDescricao']?></td>

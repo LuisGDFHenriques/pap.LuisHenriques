@@ -24,7 +24,7 @@ while ($dados = mysqli_fetch_array($result)){
                 <h4><?php echo $dados['telemovelModelo']?></h4>
                 <div style="margin-bottom:10px;">
                   <span>
-                      <del><sup>$</sup>1999 </del> &nbsp; <sup>$</sup>1779
+                      <?php echo $dados['telemovelPreco']?>?
                   </span>
                 </div>
 
