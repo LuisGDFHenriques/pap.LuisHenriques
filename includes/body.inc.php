@@ -73,32 +73,55 @@ function top()
                         <a class="nav-link" href="checkout.php">Carrinho</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="Comparativo.php">Comparativo</a>
+                    </li>
+                    <?php
+                    session_start();
+                    if (!isset($_SESSION['id'])){
+
+                    ?>
+                    <li class="nav-item">
                         <a class="nav-link" data-toggle="modal" data-target="#login">Login</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" data-toggle="modal" data-target="#regista">Registar</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="Comparativo.php">Comparativo</a>
-                    </li>
+                    <?php
+                    }
+                    else {
+
+                    ?>
+                    <?php
+                    $con=mysqli_connect(HOST,USER,PWD,DATABASE);
+                    $sql = "select * from perfis where perfilId=" . $_SESSION['id'];
+                    $resultPerfis = mysqli_query($con, $sql);
+                    $dadosPerfis = mysqli_fetch_array($resultPerfis)
+                    ?>
+                    <div class="header-right">
+                        <div class="user-access">
+                            <li class="nav-item">
+                            <a class="nav-link" data-toggle="modal" data-target="#sair">Desconectar</a>
+                            </li>
+                            <li class="nav-item">
+                            <a class="nav-link" href="perfil.php?id=<?php echo $dadosPerfis['perfilId'] ?>">
+                               <?php echo $dadosPerfis['perfilNome'] ?></a>
+                            </li>
+
+                        </div>
+                        <?php
+                        }
+                        ?>
                 </ul>
             </div>
         </div>
     </nav>
 </header>
 
-
-
-
 <?php
     }
     ?>
+
 <?php
-
-
-
-
-
 function bot($menu=HOME, $id=0)
 {
 ?>
@@ -139,6 +162,91 @@ function bot($menu=HOME, $id=0)
             ?>
         })
     </script>
+    <div class="modal fade" id="login" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+                </div>
+                <div class="modal-body">
+                    <form action="confirmaLogin.php" method="post">
+                        <div class="form-group">
+                            <label for="InputEmail">E-mail:</label>
+                            <input type="email" class="form-control" id="InputEmail">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Palavra-passe:</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1" name="id">
+                        </div>
+                        <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Manter-me logado</label>
+                        </div>
+                        <h8>Ainda não tem conta?</h8>
+                        <a data-toggle="modal" data-target="#regista">
+                            <br><button type="button" class="btn btn-outline-success" data-dismiss="modal">Registar</button></a>
+                        <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Fechar</button>
+                        <button type="Submit" class="btn btn-outline-success" >Entrar</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="modal fade" id="regista" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Registar</h5>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="InputName">Nome:</label>
+                            <input type="name" class="form-control" id="InputName" aria-describedby="emailHelp">
+                        </div>
+                        <div class="form-group">
+                            <label for="InputEmail">E-mail:</label>
+                            <input type="email" class="form-control" id="InputEmail">
+                        </div>
+                        <div class="form-group">
+                            <label for="InputPassword1">Palavra-passe</label>
+                            <input type="password" class="form-control" id="InputPassword1">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-outline-success">Registar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="sair" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel"></h5>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="InputName">Tem a certeza que deseja sair?</label>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-outline-success">Logout</button>
+                </div>
+            </div>
+        </div>
+    </div>
 <?php
 }
 ?>

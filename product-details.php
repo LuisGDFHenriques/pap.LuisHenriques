@@ -2,7 +2,7 @@
 include_once ("includes/body.inc.php");
 top();
 $id=intval($_GET['id']);
-$sql="select * from telemoveis where telemovelId=$id";
+$sql="select * from produtos where produtoId=$id";
 $res=mysqli_query($con,$sql);
 $dados=mysqli_fetch_array($res);
 
@@ -26,7 +26,7 @@ $dados=mysqli_fetch_array($res);
         <div class="row">
           <div class="col-md-7">
             <div>
-              <img src="<?php echo $dados['telemovelImagemURL']?>" alt="" class="img-fluid wc-image">
+              <img src="<?php echo $dados['produtoImagemURL']?>" alt="" class="img-fluid wc-image">
             </div>
 
             <br>
@@ -58,7 +58,7 @@ $dados=mysqli_fetch_array($res);
           <div class="col-md-5">
             <div class="sidebar-item recent-posts">
               <div class="sidebar-heading">
-                <h4><?php echo $dados['telemovelModelo']?></h4>
+                <h4><?php echo $dados['produtoNome']?></h4>
               </div>
 
               <div class="content">
@@ -117,7 +117,7 @@ $dados=mysqli_fetch_array($res);
         <h4>Descrição</h4>
         <p>
         <div class="w-product-about__info__wrapper">
-              <?php echo $dados['telemovelDescricao'];?>
+              <?php echo $dados['produtoDescricao'];?>
           </div>
         </p><br>
 
@@ -125,21 +125,21 @@ $dados=mysqli_fetch_array($res);
           <?php
           $sql="select categoriaChaveId, categoriaChaveNome
                 from categoriachaves inner join chaves on categoriaChaveId = chaveCategoriaChaveId
-                inner join telemovelchaves on chaveId = telemovelChaveChaveId
-                where telemovelChaveTelemovelId=$id group by categoriaChaveId";
+                inner join produtochaves on chaveId = produtoChaveChaveId
+                where produtoChaveProdutoId=$id group by categoriaChaveId";
           $resultCategorias=mysqli_query($con,$sql);
           while($dadosCategorias=mysqli_fetch_array($resultCategorias)){
-              $sqlChaves="select chaveNome, telemovelChaveValor
-                          from chaves inner join telemovelchaves on chaveId=telemovelChaveChaveId
+              $sqlChaves="select chaveNome, produtoChaveValor
+                          from chaves inner join telemovelchaves on chaveId=produtoChaveChaveId
                           where chaveCategoriaChaveId=".$dadosCategorias['categoriaChaveId']." and 
-                          telemovelChaveTelemovelId=$id";
+                          produtoChaveProdutoId=$id";
               $resChaves=mysqli_query($con,$sqlChaves);
               ?>
               <p align="justify"><b><?php echo $dadosCategorias['categoriaChaveNome']?></b></p>
               <?php
               while($dadosChaves=mysqli_fetch_array($resChaves)){
                   ?>
-                  <p><?php echo $dadosChaves['chaveNome']?>-<?php echo $dadosChaves['telemovelChaveValor']?></p>
+                  <p><?php echo $dadosChaves['chaveNome']?>-<?php echo $dadosChaves['produtoChaveValor']?></p>
 
                       <?php
 
@@ -180,94 +180,9 @@ $dados=mysqli_fetch_array($res);
     <!-- Footer Starts Here -->
 
 
-    <div class="modal fade" id="login" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Login</h5>
-          </div>
-          <div class="modal-body">
-            <form>
-              <div class="form-group">
-                <label for="InputEmail">E-mail:</label>
-                <input type="email" class="form-control" id="InputEmail">
-              </div>
-              <div class="form-group">
-                <label for="exampleInputPassword1">Palavra-passe:</label>
-                <input type="password" class="form-control" id="exampleInputPassword1">
-              </div>
-              <div class="form-group form-check">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                <label class="form-check-label" for="exampleCheck1">Manter-me logado</label>
-              </div>
-              <h8>Ainda não tem conta?</h8>
-              <a data-toggle="modal" data-target="#regista">
-                <br><button type="button" class="btn btn-outline-success" data-dismiss="modal">Registar</button></a>
-            </form>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Fechar</button>
-            <button type="button" class="btn btn-outline-success" >Entrar</button>
-          </div>
-        </div>
-      </div>
-    </div>
 
-
-
-    <div class="modal fade" id="regista" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Registar</h5>
-
-          </div>
-          <div class="modal-body">
-            <form>
-              <div class="form-group">
-                <label for="InputName">Nome:</label>
-                <input type="name" class="form-control" id="InputName" aria-describedby="emailHelp">
-
-              </div>
-              <div class="form-group">
-                <label for="InputEmail">E-mail:</label>
-                <input type="email" class="form-control" id="InputEmail">
-              </div>
-              <div class="form-group">
-                <label for="InputPassword1">Palavra-passe</label>
-                <input type="password" class="form-control" id="InputPassword1">
-
-              </div>
-            </form>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Fechar</button>
-            <button type="button" class="btn btn-outline-success">Registar</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Additional Scripts -->
-    <script src="assets/js/custom.js"></script>
-    <script src="assets/js/owl.js"></script>
-    <script src="assets/js/slick.js"></script>
-    <script src="assets/js/accordions.js"></script>
-
-    <script language = "text/Javascript"> 
-      cleared[0] = cleared[1] = cleared[2] = 0; //set a cleared flag for each field
-      function clearField(t){                   //declaring the array outside of the
-      if(! cleared[t.id]){                      // function makes it static and global
-          cleared[t.id] = 1;  // you could use true and false, but that's more typing
-          t.value='';         // with more chance of typos
-          t.style.color='#fff';
-          }
-      }
-    </script>
-
+<?php
+bot();
+?>
   </body>
 </html>
