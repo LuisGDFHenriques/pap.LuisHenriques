@@ -1,7 +1,7 @@
 <?php
 include_once ("includes/body.inc.php");
 top();
-$sql = "Select * from telemoveis where telemovelId";
+$sql = "Select * from produtos where produtoId";
 $result = mysqli_query($con, $sql);
 ?>
 <!-- Page Content -->
@@ -14,6 +14,7 @@ $result = mysqli_query($con, $sql);
         </div>
     </div>
 </div>
+
 <div align="center">
     <a>Pesquisar</a>
     <input autocomplete="on" id="search" type="text" value="" defaultval="Pesquisar..." style="margin: 0px;">
@@ -54,9 +55,7 @@ $result = mysqli_query($con, $sql);
 </div>
 
 
-<?php
-    LoginRegista();
-?>
+
 
 <?php
     bot(TELEMOVEIS);

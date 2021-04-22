@@ -234,7 +234,7 @@ function bot($menu=HOME, $id=0)
                     <h5 class="modal-title" id="exampleModalLabel"></h5>
                 </div>
                 <div class="modal-body">
-                    <form>
+                    <form action="logout.php" method="post">
                         <div class="form-group">
                             <label for="InputName">Tem a certeza que deseja sair?</label>
                         </div>
@@ -242,7 +242,7 @@ function bot($menu=HOME, $id=0)
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Fechar</button>
-                    <button type="button" class="btn btn-outline-success">Logout</button>
+                    <button type="submit" class="btn btn-outline-success">Logout</button>
                 </div>
             </div>
         </div>

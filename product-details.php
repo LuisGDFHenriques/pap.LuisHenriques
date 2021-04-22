@@ -12,9 +12,8 @@ $dados=mysqli_fetch_array($res);
       <div class="container">
         <div class="row">
           <div class="col-md-12">
-            <h1><small><del><sup>$</sup>1999 </del></small> &nbsp; <sup>$</sup>1779</h1>
             <span>
-                Bom desconto.
+                <?php echo $dados['produtoPreco']?>€
             </span>
           </div>
         </div>
