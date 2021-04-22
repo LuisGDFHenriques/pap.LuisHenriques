@@ -6,8 +6,8 @@ $chave=intval($_POST['chaveChaveTelemovel']);
 $produto=intval($_POST['telemovelChaveTelemovel']);
 $valor=addslashes($_POST['valorChaveTelemovel']);
 
-$sql="insert into telemovelchaves(telemovelChaveChaveId, telemovelChaveTelemovelId, telemovelChaveValor) values(".$chave.",".$produto.",'".$valor."');";
+$sql="insert into produtochaves(produtoChaveChaveId, produtoChaveProdutoId, produtoChaveValor) values(".$chave.",".$produto.",'".$valor."');";
 mysqli_query($con,$sql);
-header("location:telemoveisChave.php?id=$produto");
+header("location:produtosChave.php?id=$produto");
 
 ?>

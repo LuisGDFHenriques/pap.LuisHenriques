@@ -14,8 +14,20 @@ top()
                         <div class="form-group">
                             <label for="nomeCategoriaChave"> Nome</label>
                             <input type="text" class="form-control" id="nomeCategoriaChave" name="nomeCategoriaChave">
+                        </div>
+                        <div class="form-group">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" checked type="radio" name="tipoCategoria" id="inlineRadio1" value="geral">
+                                <label class="form-check-label" for="inlineRadio1">Geral (aparece em todos os produtos)</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="tipoCategoria" id="inlineRadio2" value="especifico">
+                                <label class="form-check-label" for="inlineRadio2">Específico (a uma categoria de produtos)</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
                             <label for="Categoria"> Categoria</label>
-                            <select name="Categoria">
+                            <select name="categoria" class="form-control">
                                 <option value="-1">Escolha a categoria...</option>
                                 <?php
                                 $sql="select * from categorias order by categoriaNome";
@@ -29,6 +41,8 @@ top()
                                 ?>
                             </select>
                         </div>
+
+
 
                         <button type="submit" class="btn btn-primary">Confirma nova</button>
                     </form>

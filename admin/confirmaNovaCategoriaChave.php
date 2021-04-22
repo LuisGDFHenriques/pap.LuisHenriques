@@ -2,9 +2,13 @@
 include_once ("includes/body.inc.php");
 
 
-$nome=$_POST['nomeCategoriaChave'];
-$idCat=intval($_POST['Categoria']);
-$sql="insert into categoriachaves(categoriaChaveNome,categoriaChaveCategoriaId) values('".$nome."',".$idCat.")";
+$nome=addslashes($_POST['nomeCategoriaChave']);
+$idCat=intval($_POST['categoria']);
+$tipo=addslashes($_POST['tipoCategoria']);
+if($idCat==-1) {// não há categoria
+    $idCat = "NULL";
+}
+$sql="insert into categoriachaves(categoriaChaveNome,categoriaChaveCategoriaId,categoriaChaveTipo) values('".$nome."',".$idCat.",'".$tipo."')";
 
 mysqli_query($con,$sql);
 header("location:categoriaChaves.php");

@@ -5,7 +5,7 @@
     <file url="file://$PROJECT_DIR$/admin/adicionarCategorias.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/admin/adicionarChave.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/admin/adicionarMarca.php" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/admin/adicionarTelemovel.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/admin/adicionarProduto.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/admin/adicionarTelemovelChave.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/admin/categoriaChaves.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/admin/categorias.php" charset="UTF-8" />
@@ -14,10 +14,10 @@
     <file url="file://$PROJECT_DIR$/admin/editarCategorias.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/admin/editarChaves.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/admin/editarMarca.php" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/admin/editarTelemoveis.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/admin/editarProdutos.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/admin/marcas.php" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/admin/telemoveis.php" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/admin/telemoveisChave.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/admin/produtos.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/admin/produtosChave.php" charset="UTF-8" />
     <file url="PROJECT" charset="ISO-8859-1" />
   </component>
 </project>

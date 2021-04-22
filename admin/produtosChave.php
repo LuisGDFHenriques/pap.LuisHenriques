@@ -1,6 +1,9 @@
 <?php
 include_once("includes/body.inc.php");
 $id=intval($_GET['id']);
+$sql="select * from produtos where produtoId=$id";
+$result=mysqli_query($con,$sql);
+$dadosProduto=mysqli_fetch_array($result);
 top();
 ?>
 
@@ -9,16 +12,22 @@ top();
         <div class="row">
             <div class="col-md-12">
                 <div class="section-heading">
-                    <h2>Novo <em>TelemoveisChave</em></h2>
-
+                    <h2>Chaves <em> de produtos</em></h2>
+                    <img src="../<?php echo $dadosProduto['produtoImagemURL']?>" width="200">
+                    <h1><?php echo $dadosProduto['produtoNome']?></h1>
                 </div>
-                <form action="confirmaNovoTelemovelChave.php" method="post" enctype="multipart/form-data">
-                    <input type="hidden" value="<?php echo $id?>" name="telemovelChaveTelemovel">
+                <form action="confirmaNovoProdutoChave.php" method="post" enctype="multipart/form-data">
+                    <input id="idProduto" type="hidden" value="<?php echo $id?>" name="telemovelChaveTelemovel">
                     <label>Categoria Chaves</label>
                     <select name="catChaveTelemovel" id="chaveCategoria">
                         <option value="-1">Escolha a categoria chave...</option>
                         <?php
-                        $sql="select * from categoriachaves order by categoriaChaveNome";
+                        $sql="select * from categoriachaves 
+where categoriaChaveTipo='geral'
+or categoriaChaveId in(
+select categoriaChaveId
+from categoriachaves inner join categorias on categoriaId =categoriaChaveCategoriaId inner join produtos on categoriaId= produtoCategoriaId
+	where produtoId=".$id.") order by categoriaChaveNome";
                         $result=mysqli_query($con,$sql);
                         while ($dados=mysqli_fetch_array($result)){
                             ?>
@@ -49,10 +58,10 @@ top();
                                 <th colspan="2">opções</th>
                             </tr>
                             <?php
-                            $sql="Select * from telemovelchaves 
-                                    inner join chaves on chaveId=telemovelChaveChaveId
+                            $sql="Select * from produtochaves 
+                                    inner join chaves on chaveId=produtoChaveChaveId
                                     inner join categoriachaves on categoriaChaveId = chaveCategoriaChaveId 
-                                    where telemovelChaveTelemovelId=".$id;
+                                    where produtoChaveProdutoId=".$id;
                             $result=mysqli_query($con,$sql);
                             while($dados=mysqli_fetch_array($result)){
                                 ?>
@@ -60,7 +69,7 @@ top();
                                 <tr>
                                     <td><?php echo $dados['categoriaChaveNome']?></td>
                                     <td><?php echo $dados['chaveNome']?></td>
-                                    <td><?php echo $dados['telemovelChaveValor']?></td>
+                                    <td><?php echo $dados['produtoChaveValor']?></td>
 
                                     <td><a class='btn btn-danger btn-xs' href="" onclick="confirmaElimina(<?php echo $dados['chaveId']?>);"> <i class='fa fa-trash'></i>Eliminar</a></td>
 

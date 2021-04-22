@@ -6,11 +6,12 @@ $modelo=addslashes($_POST['modeloTelemovel']);
 $preco=addslashes($_POST['preco']);
 $descricao=addslashes($_POST['reviewTexto']);
 $idMar=intval($_POST['telemovelMarca']);
+$idCat=intval($_POST['produtoCategoria']);
 $imagem=$_FILES['imagemTelemovel']['name'];
-$novoNome="../images/".$imagem;
+$novoNome="images/".$imagem;
 
 copy($_FILES['imagemTelemovel']['tmp_name'],"../".$novoNome);
-$sql="insert into telemoveis(telemovelModelo, telemovelMarcaId, telemovelImagemURL, telemovelDescricao, telemovelPreco) values('".$modelo."',".$idMar.",'".$novoNome."','".$descricao."', ".$preco.");";
+$sql="insert into produtos(produtoNome, produtoMarcaId, produtoImagemURL, produtoDescricao, produtoPreco, produtoCategoriaId) values('".$modelo."',".$idMar.",'".$novoNome."','".$descricao."', ".$preco.",".$idCat.");";
 mysqli_query($con,$sql);
-header("location:telemoveis.php");
+header("location:produtos.php");
 ?>

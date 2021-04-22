@@ -69,10 +69,10 @@ top();
             <div class="row">
                 <div class="col-md-12">
                     <div class="section-heading">
-                        <h2>Novo<em> Telemovel</em></h2>
+                        <h2>Novo<em> Produto</em></h2>
 
                     </div>
-                        <form action="confirmaNovoTelemovel.php" method="post" enctype="multipart/form-data">
+                        <form action="confirmaNovoProduto.php" method="post" enctype="multipart/form-data">
                             <label for="modeloTelemovel">Nome: </label>
                             <input type="text" class="form-control" id="modeloTelemovel" name="modeloTelemovel"><br>
                             <label for="preco">Preço: </label>
@@ -83,6 +83,19 @@ top();
                             <input type="file" class="form-control" id="imagemTelemovel" name="imagemTelemovel"><br>
 
 
+                            <select name="produtoCategoria">
+                                <option value="-1">Escolha a categoria...</option>
+                                <?php
+                                $sql="select * from categorias order by categoriaNome";
+                                $result=mysqli_query($con,$sql);
+                                while ($dados=mysqli_fetch_array($result)){
+                                    ?>
+                                    <option value="<?php echo $dados['categoriaId']?>"><?php echo $dados['categoriaNome']?></option>
+                                    <?php
+                                }
+
+                                ?>
+                            </select>
                             <select name="telemovelMarca">
                                 <option value="-1">Escolha a marca...</option>
                                 <?php

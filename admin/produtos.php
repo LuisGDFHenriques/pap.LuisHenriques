@@ -1,6 +1,6 @@
 <?php
 include_once("includes/body.inc.php");
-$sql="Select * from telemoveis inner join marcas on telemovelMarcaId = marcaId";
+$sql="Select * from produtos inner join marcas on produtoMarcaId = marcaId";
 $result=mysqli_query($con,$sql);
 top();
 ?>
@@ -26,8 +26,8 @@ top();
             <div class="row">
                 <div class="col-md-12">
                     <div class="section-heading">
-                        <h2>Lista<em> Telemoveis</em></h2>
-                        <a href="adicionarTelemovel.php" ><span class="btn-sm btn-primary">adiciona</span></a>
+                        <h2>Lista<em> Produtos</em></h2>
+                        <a href="adicionarProduto.php" ><span class="btn-sm btn-primary">adiciona</span></a>
                     </div>
                 </div>
                 <table class='table table-striped' width="100%">
@@ -44,15 +44,15 @@ top();
                     while($dados=mysqli_fetch_array($result)){
                         ?>
                         <tr>
-                            <td><?php echo $dados['telemovelId']?></td>
-                            <td><?php echo $dados['telemovelModelo']?></td>
-                            <td><?php echo $dados['telemovelPreco']?></td>
-                            <td><img src="../<?php echo $dados['telemovelImagemURL']?>"></td>
+                            <td><?php echo $dados['produtoId']?></td>
+                            <td><?php echo $dados['produtoNome']?></td>
+                            <td><?php echo $dados['produtoPreco']?></td>
+                            <td><img width="120" src="../<?php echo $dados['produtoImagemURL']?>"></td>
                             <td><?php echo $dados['marcaNome']?></td>
-                            <td><?php echo $dados['telemovelDescricao']?></td>
-                            <td><a href="editarTelemoveis.php?id=<?php echo $dados['telemovelId']?>"><span class="btn-sm btn-primary">Edita</span></a></td>
-                            <td><span onclick="confirmaElimina(<?php echo $dados['telemovelId']?>)" class="btn-sm btn-danger">Elimina</span></td>
-                            <td><a href="telemoveisChave.php?id=<?php echo $dados['telemovelId']?>"><span class="btn-sm btn-primary">Detalhes</span></a></td>
+                            <td><?php echo substr($dados['produtoDescricao'],0,100)." (..)"?></td>
+                            <td><a href="editarProdutos.php?id=<?php echo $dados['produtoId']?>"><span class="btn-sm btn-primary">Edita</span></a></td>
+                            <td><span onclick="confirmaElimina(<?php echo $dados['produtoId']?>)" class="btn-sm btn-danger">Elimina</span></td>
+                            <td><a href="produtosChave.php?id=<?php echo $dados['produtoId']?>"><span class="btn-sm btn-primary">Detalhes</span></a></td>
                         </tr>
                         <?php
                     }

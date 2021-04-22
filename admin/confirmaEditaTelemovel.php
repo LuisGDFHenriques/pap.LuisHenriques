@@ -17,6 +17,6 @@ if($imagem!=''){
 $sql.= "where telemovelId=".$id;
 
 mysqli_query($con,$sql);
-header("location:telemoveis.php");
+header("location:produtos.php");
 ?>
 
