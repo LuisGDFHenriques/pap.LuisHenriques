@@ -238,12 +238,12 @@ function bot($menu=HOME, $id=0)
                         <div class="form-group">
                             <label for="InputName">Tem a certeza que deseja sair?</label>
                         </div>
-                    </form>
+
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Fechar</button>
                     <button type="submit" class="btn btn-outline-success">Logout</button>
-                </div>
+                </div></form>
             </div>
         </div>
     </div>

@@ -3,7 +3,7 @@ include_once ("includes/body.inc.php");
 top();
 
 $id=intval($_GET['id']);
-$sql="Select * from telemoveis inner join marcas on telemovelMarcaId = marcaId where telemovelId=".$id;
+$sql="Select * from produtos inner join marcas on produtoMarcaId = marcaId where produtoId=".$id;
 $result=mysqli_query($con,$sql);
 $dados=mysqli_fetch_array($result);
 
@@ -80,16 +80,29 @@ $dados=mysqli_fetch_array($result);
                     <form action="confirmaEditaTelemovel.php" method="post" enctype="multipart/form-data">
                         <input type="hidden" name="telemovelId" value="<?php echo $id?>">
                         <label for="modeloTelemovel">Nome: </label>
-                        <input type="text" class="form-control" id="modeloTelemovel" name="modeloTelemovel" value="<?php echo $dados['telemovelModelo']?>"><br>
+                        <input type="text" class="form-control" id="modeloTelemovel" name="modeloTelemovel" value="<?php echo $dados['produtoNome']?>"><br>
                         <label for="preco">Preco:</label>
-                        <input type="number" class="form-control" id="preco" name="preco" value="<?php echo $dados['telemovelPreco']?>"><br>
+                        <input type="number" class="form-control" id="preco" name="preco" value="<?php echo $dados['produtoPreco']?>"><br>
                         <label for="myTextarea">Descrição: </label>
-                        <textarea class="form-control" id="myTextarea" name="reviewTexto"><?php echo $dados['telemovelDescricao']?></textarea><br>
-                        <img src="../<?php echo $dados['telemovelImagemURL']?>" width="200">
+                        <textarea class="form-control" id="myTextarea" name="reviewTexto"><?php echo $dados['produtoDescricao']?></textarea><br>
+                        <img src="../<?php echo $dados['produtoImagemURL']?>" width="200">
                         <label for="imagemTelemovel">Imagem: </label>
                         <input type="file" id="imagemTelemovel" name="imagemTelemovel"><br>
                         <br>
                         <br>
+                        <select name="produtoCategoria">
+                            <option value="-1">Escolha a categoria...</option>
+                            <?php
+                            $sql="select * from categorias order by categoriaNome";
+                            $result=mysqli_query($con,$sql);
+                            while ($dados=mysqli_fetch_array($result)){
+                                ?>
+                                <option value="<?php echo $dados['categoriaId']?>"><?php echo $dados['categoriaNome']?></option>
+                                <?php
+                            }
+
+                            ?>
+                        </select>
                         <select name="telemovelMarcaId">
                             <option value="-1">Escolha a marca...</option>
                             <?php
