@@ -12,7 +12,7 @@ $imagem=$_FILES['imagemTelemovel']['name'];
 $novoNome="images/".$imagem;
 
 copy($_FILES['imagemTelemovel']['tmp_name'],"../".$novoNome);
-echo $sql="insert into produtos(produtoNome, produtoMarcaId, produtoImagemURL, produtoDescricao, produtoPreco, produtoCategoriaId, produtoDestaque) values('".$modelo."',".$idMar.",'".$novoNome."','".$descricao."','".$preco."','".$idCat."',".$destaque.");";
+$sql="insert into produtos(produtoNome, produtoMarcaId, produtoImagemURL, produtoDescricao, produtoPreco, produtoCategoriaId, produtoDestaque) values('".$modelo."',".$idMar.",'".$novoNome."','".$descricao."','".$preco."','".$idCat."','".$destaque."');";
 mysqli_query($con,$sql);
-//header("location:produtos.php");
+header("location:produtos.php");
 ?>
