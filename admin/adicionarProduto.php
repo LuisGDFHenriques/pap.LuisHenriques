@@ -73,17 +73,26 @@ top();
 
                     </div>
                         <form action="confirmaNovoProduto.php" method="post" enctype="multipart/form-data">
+                            <div class="form-group">
                             <label for="modeloTelemovel">Nome: </label>
-                            <input type="text" class="form-control" id="modeloTelemovel" name="modeloTelemovel"><br>
+                            <input type="text" class="form-control" id="modeloTelemovel" name="modeloTelemovel">
+                            </div><br>
+                            <div class="form-group">
                             <label for="preco">Preço: </label>
                             <input type="number" class="form-control" id="preco" name="preco"><br>
+                            </div>
+                            <div class="form-group">
                             <label for="descricaoTelemovel">Descrição: </label>
-                            <textarea name="reviewTexto" id="myTextarea" ></textarea><br>
+                            <textarea name="reviewTexto" id="myTextarea" ></textarea>
+                            </div><br>
+                            <div class="form-group">
                             <label for="imagemTelemovel">Imagem: </label>
-                            <input type="file" class="form-control" id="imagemTelemovel" name="imagemTelemovel"><br>
+                            <input type="file" class="form-control" id="imagemTelemovel" name="imagemTelemovel">
+                            </div><br>
 
-
-                            <select name="produtoCategoria">
+                            <div class="form-group">
+                            <label for="produtoCategoria"> Categoria:</label>
+                            <select name="produtoCategoria" class="form-control">
                                 <option value="-1">Escolha a categoria...</option>
                                 <?php
                                 $sql="select * from categorias order by categoriaNome";
@@ -93,10 +102,13 @@ top();
                                     <option value="<?php echo $dados['categoriaId']?>"><?php echo $dados['categoriaNome']?></option>
                                     <?php
                                 }
-
                                 ?>
                             </select>
-                            <select name="telemovelMarca">
+                            </div>
+                            <br>
+                            <div class="form-group">
+                            <label for="telemovelMarca"> Marca:</label>
+                            <select name="telemovelMarca" class="form-control">
                                 <option value="-1">Escolha a marca...</option>
                                 <?php
                                 $sql="select * from marcas order by marcaNome";
@@ -109,6 +121,19 @@ top();
 
                                 ?>
                             </select>
+                            </div>
+                            <br>
+                            <label>Destaque:</label>
+                            <div class="form-group">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" checked type="radio" name="destaqueProduto" id="inlineRadio1" value="nao">
+                                    <label class="form-check-label" for="inlineRadio1">Não</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="destaqueProduto" id="inlineRadio2" value="sim">
+                                    <label class="form-check-label" for="inlineRadio2">Sim</label>
+                                </div>
+                            </div>
                             <br>
                             <button type="submit" class="btn btn-primary">Confirma nova</button>
                         </form>

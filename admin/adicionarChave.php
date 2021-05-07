@@ -11,9 +11,13 @@ top()
 
                     </div>
                         <form action="confirmaNovaChave.php" method="post" enctype="multipart/form-data">
+                            <div class="form-group">
                             <label for="nomeChave">Nome: </label>
-                            <input type="text" class="form-control" id="nomeChave" name="nomeChave"><br>
-                            <select name="chaveCategoria">
+                            <input type="text" class="form-control" id="nomeChave" name="nomeChave">
+                            </div><br>
+                            <div class="form-group">
+                            <label for="chaveCategoria"> chaveCategoria:</label>
+                            <select name="chaveCategoria" class="form-control">
                                 <option value="-1">Escolha a categoriaChave...</option>
                                 <?php
                                 $sql="select * from categoriachaves order by categoriaChaveNome";
@@ -26,6 +30,7 @@ top()
 
                                 ?>
                             </select>
+                            </div>
                             <br>
                             <button type="submit" class="btn btn-primary">Confirma nova</button>
                         </form>
