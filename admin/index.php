@@ -4,8 +4,6 @@ top();
 ?>
 
   <body>
-
-
     <!-- Banner Starts Here -->
     <div class="main-banner header-text bg-danger" id="top">
 

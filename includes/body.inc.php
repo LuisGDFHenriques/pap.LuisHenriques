@@ -75,16 +75,17 @@ function top()
                     <li class="nav-item">
                         <a class="nav-link" href="Comparativo.php">Comparativo</a>
                     </li>
+                    <li>
                     <?php
                     session_start();
                     if (!isset($_SESSION['id'])){
 
                     ?>
                     <li class="nav-item">
-                        <a class="nav-link" data-toggle="modal" data-target="#login">Login</a>
+                        <a href="#" class="nav-link" data-toggle="modal" data-target="#login">Login</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" data-toggle="modal" data-target="#regista">Registar</a>
+                        <a href="#" class="nav-link" data-toggle="modal" data-target="#regista">Registar</a>
                     </li>
                     <?php
                     }
@@ -108,9 +109,11 @@ function top()
                             </li>
 
                         </div>
+                    </div>
                         <?php
                         }
                         ?>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -185,8 +188,9 @@ function bot($menu=HOME, $id=0)
                         <h8>Ainda não tem conta?</h8>
                         <a data-toggle="modal" data-target="#regista">
                             <br><button type="button" class="btn btn-outline-success" data-dismiss="modal">Registar</button></a>
-                        <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Fechar</button>
+
                         <button type="Submit" class="btn btn-outline-success" >Entrar</button>
+                        <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Fechar</button>
                     </form>
                 </div>
                 <div class="modal-footer">
@@ -238,15 +242,80 @@ function bot($menu=HOME, $id=0)
                         <div class="form-group">
                             <label for="InputName">Tem a certeza que deseja sair?</label>
                         </div>
-                    </form>
+
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Fechar</button>
                     <button type="submit" class="btn btn-outline-success">Logout</button>
-                </div>
+                </div></form>
             </div>
         </div>
     </div>
-<?php
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 footer-item">
+                    <h4>Fica a saber</h4>
+                    <p>A nossa loja foi criada em 2/11/2020 com intenção de vender telemoveis rápido e de entrega rapida.</p>
+                    <ul class="social-icons">
+                        <li><div class="count-area-content">
+                               <div class="count-digit">1245</div>
+                               <div class="count-title">Produtos</div>
+                            </div></li>
+
+                        <li><div class="count-area-content">
+                                <div class="count-digit">3</div>
+                                <div class="count-title">Registrados</div>
+                            </div></li>
+
+                    </ul>
+                </div>
+
+                <div class="col-md-4 footer-item">
+                    <h4>Páginas</h4>
+                    <ul class="menu-list">
+                        <li><a href="products.php">Telemóveis</a></li>
+                        <li><a href="capas.php">Capas</a></li>
+                        <li><a href="carregadores.php">Carregadores</a></li>
+                        <li><a href="fones.php">Fones</a></li>
+                        <li><a href="about.php">Sobre Nós</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 footer-item last-item">
+                    <h4>Contacte-nos</h4>
+                    <div class="contact-form">
+                        <form id="contact footer-contact" action="" method="post">
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12 col-sm-12">
+                                    <fieldset>
+                                        <input name="name" type="text" class="form-control" id="name" placeholder="Nome Completo" required="">
+                                    </fieldset>
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-sm-12">
+                                    <fieldset>
+                                        <input name="email" type="text" class="form-control" id="email" pattern="[^ @]*@[^ @]*" placeholder="E-Mail" required="">
+                                    </fieldset>
+                                </div>
+                                <div class="col-lg-12">
+                                    <fieldset>
+                                        <textarea name="message" rows="6" class="form-control" id="message" placeholder="A sua mensagem" required=""></textarea>
+                                    </fieldset>
+                                </div>
+                                <div class="col-lg-12">
+                                    <fieldset>
+                                        <button type="submit" id="form-submit" class="filled-button">Send Message</button>
+                                    </fieldset>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <?php
 }
 ?>

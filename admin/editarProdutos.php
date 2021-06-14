@@ -3,7 +3,7 @@ include_once ("includes/body.inc.php");
 top();
 
 $id=intval($_GET['id']);
-$sql="Select * from telemoveis inner join marcas on telemovelMarcaId = marcaId where telemovelId=".$id;
+$sql="Select * from produtos inner join marcas on produtoMarcaId = marcaId inner join categorias on produtoCategoriaId = categoriaId where produtoId=".$id;
 $result=mysqli_query($con,$sql);
 $dados=mysqli_fetch_array($result);
 
@@ -75,22 +75,49 @@ $dados=mysqli_fetch_array($result);
             <div class="row">
                 <div class="col-md-12">
                     <div class="section-heading">
-                        <h2>Editar<em> Telemovel</em></h2>
+                        <h2>Editar<em> Produto</em></h2>
                     </div>
-                    <form action="confirmaEditaTelemovel.php" method="post" enctype="multipart/form-data">
-                        <input type="hidden" name="telemovelId" value="<?php echo $id?>">
-                        <label for="modeloTelemovel">Nome: </label>
-                        <input type="text" class="form-control" id="modeloTelemovel" name="modeloTelemovel" value="<?php echo $dados['telemovelModelo']?>"><br>
+                    <form action="confirmaEditaProduto.php" method="post" enctype="multipart/form-data">
+                        <input type="hidden" name="produtoId" value="<?php echo $id?>">
+                        <div class="form-group">
+                        <label for="nomeProduto">Nome: </label>
+                        <input type="text" class="form-control" id="nomeProduto" name="nomeProduto" value="<?php echo $dados['produtoNome']?>">
+                        </div><br>
+                        <div class="form-group">
                         <label for="preco">Preco:</label>
-                        <input type="number" class="form-control" id="preco" name="preco" value="<?php echo $dados['telemovelPreco']?>"><br>
+                        <input type="number" class="form-control" id="preco" name="preco" value="<?php echo $dados['produtoPreco']?>">
+                        </div><br>
+                        <div class="form-group">
                         <label for="myTextarea">Descrição: </label>
-                        <textarea class="form-control" id="myTextarea" name="reviewTexto"><?php echo $dados['telemovelDescricao']?></textarea><br>
-                        <img src="../<?php echo $dados['telemovelImagemURL']?>" width="200">
-                        <label for="imagemTelemovel">Imagem: </label>
-                        <input type="file" id="imagemTelemovel" name="imagemTelemovel"><br>
+                        <textarea class="form-control" id="myTextarea" name="reviewTexto"><?php echo $dados['produtoDescricao']?></textarea>
+                        </div><br>
+                        <div class="form-group">
+                        <img src="../<?php echo $dados['produtoImagemURL']?>" width="200">
+                        <label for="imagemProduto">Imagem: </label>
+                        <input type="file" id="imagemProduto" name="imagemProduto">
+                        </div><br>
                         <br>
                         <br>
-                        <select name="telemovelMarcaId">
+                        <div class="form-group">
+                        <label for="produtoCategoria"> Categoria:</label>
+                        <select name="produtoCategoria" class="form-control">
+                            <option value="-1">Escolha a categoria...</option>
+                            <?php
+                            $sql="select * from categorias order by categoriaNome";
+                            $result=mysqli_query($con,$sql);
+                            while ($dados=mysqli_fetch_array($result)){
+                                ?>
+                                <option value="<?php echo $dados['categoriaId']?>"><?php echo $dados['categoriaNome']?></option>
+                                <?php
+                            }
+
+                            ?>
+                        </select>
+                        </div>
+                        <br>
+                        <div class="form-group">
+                        <label for="produtoMarca"> Marca:</label>
+                        <select name="prodotuMarcaId" class="form-control">
                             <option value="-1">Escolha a marca...</option>
                             <?php
                             $sql="select * from marcas order by marcaNome";
@@ -99,7 +126,7 @@ $dados=mysqli_fetch_array($result);
                                 ?>
                                 <option value="<?php echo $dadosMar['marcaId']?>"
                                     <?php
-                                    if($dados['telemovelMarcaId']==$dadosMar['marcaId'])
+                                    if($dados['produtoMarcaId']==$dadosMar['marcaId'])
                                         echo " selected ";
                                     ?>
                                 >
@@ -109,8 +136,22 @@ $dados=mysqli_fetch_array($result);
                             }
 
                             ?>
-
                         </select>
+                        </div>
+                        <br>
+                            <label>Destaque:</label>
+                            <div class="form-group">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" checked type="radio" name="destaqueProduto" id="inlineRadio1" value="nao">
+                                    <label class="form-check-label" for="inlineRadio1">Não</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="destaqueProduto" id="inlineRadio2" value="sim">
+                                    <label class="form-check-label" for="inlineRadio2">Sim</label>
+                                </div>
+                            </div>
+
+
                         <br>
                         <br>
                         <button type="submit" class="btn btn-primary">Confirma alterações</button>
