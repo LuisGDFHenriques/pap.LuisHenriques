@@ -1,6 +1,6 @@
 <?php
 include_once ("includes/body.inc.php");
-top();
+top(CARRINHO);
 ?>
     <!-- Page Content -->
     <div class="page-heading header-text">

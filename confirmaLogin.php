@@ -1,13 +1,21 @@
 <?php
 include_once("includes/body.inc.php");
-$nome=addslashes($_POST['utilizador']);
-$id=intval($_POST['id']);
-$sql="select * from perfis where perfilId=$id";
+$login=addslashes($_POST['login']);
+$password=md5(addslashes($_POST['password']));
+
+$sql="select userId from users where userLogin='".$login."'";
 $result=mysqli_query($con,$sql);
 $dados=mysqli_fetch_array($result);
-session_start();
-$_SESSION['id']=$dados['perfilId'];
-$_SESSION['nome']=$dados['perfilNome'];
+if(mysqli_affected_rows($con)==1){ // um único login
+    $sql="select * from users inner join perfis on userId=perfilId where userId=".$dados[0];
+    $result=mysqli_query($con,$sql);
+    $dados=mysqli_fetch_array($result);
+    if($login==$dados['userLogin'] && $password == $dados['userPassword']){
+        session_start();
+        $_SESSION['id']=$dados['userId'];
+        $_SESSION['nome']=$dados['perfilNome'];
+    }
+}
 header("location:index.php");
 ?>
 

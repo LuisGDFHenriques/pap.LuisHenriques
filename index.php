@@ -1,6 +1,6 @@
 <?php
 include_once ("includes/body.inc.php");
-top();
+top(HOME);
 ?>
     <!-- Page Content -->
     <!-- Banner Starts Here -->

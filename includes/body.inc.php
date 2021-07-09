@@ -3,7 +3,7 @@ include_once("config.inc.php");
 $con=mysqli_connect(HOST,USER,PWD,DATABASE);
 $con->set_charset("utf8");
 
-function top()
+function top($menu=HOME)
 {
 ?>
 <!DOCTYPE html>
@@ -54,26 +54,26 @@ function top()
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.php">Home
+                        <a class="nav-link  <?php if($menu==HOME) echo " active "?>" href="index.php">Home
                             <span class="sr-only">(current)</span>
                         </a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="dropdown-toggle nav-link" data-toggle="dropdown" href="#" role="button"
+                        <a class="dropdown-toggle nav-link <?php if($menu==TELEMOVEIS) echo " active "?> " data-toggle="dropdown" href="#" role="button"
                            aria-haspopup="true" aria-expanded="false">Produtos</a>
 
                         <div class="dropdown-menu">
                             <a class="dropdown-item" href="products.php">Telemoveis</a>
                             <a class="dropdown-item" href="capas.php">Capas</a>
                             <a class="dropdown-item" href="carregadores.php">Carregadores</a>
-                            <a class="dropdown-item" href="fones.php">Fones</a>
+                            <a class="dropdown-item" href="phones.php">Phones</a>
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="checkout.php">Carrinho</a>
+                        <a class="nav-link <?php if($menu==CARRINHO) echo " active "?>" href="checkout.php">Carrinho</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="Comparativo.php">Comparativo</a>
+                        <a class="nav-link<?php if($menu==COMPARATIVO) echo " active "?>" href="comparativo.php">Comparativo</a>
                     </li>
                     <li>
                     <?php
@@ -82,10 +82,10 @@ function top()
 
                     ?>
                     <li class="nav-item">
-                        <a href="#" class="nav-link" data-toggle="modal" data-target="#login">Login</a>
+                        <a href="#" class="nav-link" onclick="abreLogin()">Login</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link" data-toggle="modal" data-target="#regista">Registar</a>
+                        <a href="#" class="nav-link" onclick="abreRegista()">Registar</a>
                     </li>
                     <?php
                     }
@@ -101,7 +101,7 @@ function top()
                     <div class="header-right">
                         <div class="user-access">
                             <li class="nav-item">
-                            <a class="nav-link" data-toggle="modal" data-target="#sair">Desconectar</a>
+                            <a class="nav-link" data-toggle="modal" data-target="#sair">Logout</a>
                             </li>
                             <li class="nav-item">
                             <a class="nav-link" href="perfil.php?id=<?php echo $dadosPerfis['perfilId'] ?>">
@@ -165,7 +165,7 @@ function bot($menu=HOME, $id=0)
             ?>
         })
     </script>
-    <div class="modal fade" id="login" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" style="top:50px" id="login" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -175,20 +175,16 @@ function bot($menu=HOME, $id=0)
                     <form action="confirmaLogin.php" method="post">
                         <div class="form-group">
                             <label for="InputEmail">E-mail:</label>
-                            <input type="email" class="form-control" id="InputEmail">
+                            <input type="email" class="form-control" id="InputEmail" name="login">
                         </div>
                         <div class="form-group">
                             <label for="exampleInputPassword1">Palavra-passe:</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1" name="id">
+                            <input type="password" class="form-control" id="exampleInputPassword1" name="password">
                         </div>
-                        <div class="form-group form-check">
-                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                            <label class="form-check-label" for="exampleCheck1">Manter-me logado</label>
-                        </div>
-                        <h8>Ainda não tem conta?</h8>
-                        <a data-toggle="modal" data-target="#regista">
-                            <br><button type="button" class="btn btn-outline-success" data-dismiss="modal">Registar</button></a>
 
+                        <h8>Ainda não tem conta?</h8>
+                        <a href="#" onclick="abreRegista();">Registar</a>
+                        <br>
                         <button type="Submit" class="btn btn-outline-success" >Entrar</button>
                         <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Fechar</button>
                     </form>
@@ -208,26 +204,32 @@ function bot($menu=HOME, $id=0)
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">Registar</h5>
                 </div>
+                <form action="confirmaRegista.php" method="post">
                 <div class="modal-body">
-                    <form>
+
                         <div class="form-group">
                             <label for="InputName">Nome:</label>
-                            <input type="name" class="form-control" id="InputName" aria-describedby="emailHelp">
+                            <input type="text" class="form-control" id="InputName" aria-describedby="emailHelp" name="nome">
                         </div>
                         <div class="form-group">
-                            <label for="InputEmail">E-mail:</label>
-                            <input type="email" class="form-control" id="InputEmail">
+                            <label for="InputEmail">E-mail: <small>(serve de login)</small></label>
+                            <input type="email" name="email" class="form-control" id="InputEmail">
                         </div>
                         <div class="form-group">
                             <label for="InputPassword1">Palavra-passe</label>
-                            <input type="password" class="form-control" id="InputPassword1">
+                            <input type="password" name="password" class="form-control" id="InputPassword1">
                         </div>
-                    </form>
+                        <div class="form-group">
+                            <label for="InputPassword1">Confirma palavra-passe</label>
+                            <input type="password" class="form-control" id="InputPassword2">
+                        </div>
+
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Fechar</button>
-                    <button type="button" class="btn btn-outline-success">Registar</button>
+                    <button type="submit" class="btn btn-outline-success">Registar</button>
                 </div>
+                </form>
             </div>
         </div>
     </div>

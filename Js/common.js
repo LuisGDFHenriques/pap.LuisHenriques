@@ -13,3 +13,12 @@ function fillTableTelemoveis(txt = '', id= -1) {
 
 
 }
+
+function abreRegista(){
+    $('#login').modal('hide');
+    $('#regista').modal('show');
+}
+function abreLogin(){
+    $('#login').modal('show');
+    $('#regista').modal('hide');
+}

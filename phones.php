@@ -1,7 +1,7 @@
 
 <?php
     include_once ("includes/body.inc.php");
-    top();
+    top(TELEMOVEIS);
 ?>
 <!-- Page Content -->
 <div class="page-heading header-text">

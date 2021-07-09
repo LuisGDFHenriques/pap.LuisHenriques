@@ -1,6 +1,6 @@
 <?php
 include_once ("includes/body.inc.php");
-top();
+top(COMPARATIVO);
 ?>
     <!-- Page Content -->
     <div class="page-heading header-text">
@@ -50,7 +50,7 @@ top();
 
   </table>
         </div> <!-- fim do container -->
-
+    </div>
 
 
         <?php
