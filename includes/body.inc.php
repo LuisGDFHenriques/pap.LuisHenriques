@@ -283,7 +283,6 @@ function bot($menu=HOME, $id=0)
                         <li><a href="phones.php">phones</a></li>
                         <li><a href="checkout.php">Carrinho</a></li>
                         <li><a href="Comparativo.php">Comparativo</a></li>
-
                     </ul>
                 </div>
                 <div class="col-md-4 footer-item last-item">
