@@ -45,7 +45,8 @@ top();
                             <td><?php echo $dados['chaveNome']?></td>
                             <td><?php echo $dados['categoriaChaveNome']?></td>
                             <td><a href="editarChaves.php?id=<?php echo $dados['chaveId']?>"><span class="btn-sm btn-primary">Edita</span></a></td>
-                            <td><span onclick="confirmaElimina(<?php echo $dados['chaveId']?>)" class="btn-sm btn-danger">Elimina</span></td>                        </tr>
+                            <td><span onclick="confirmaElimina(<?php echo $dados['chaveId']?>)" class="btn-sm btn-danger">Elimina</span></td>
+                        </tr>
                         <?php
                     }
                     ?>
@@ -53,8 +54,7 @@ top();
                     </table>
             </div>
         </div>
-
-
+    </div>
 </div>
 <?php
 bottom();

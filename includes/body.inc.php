@@ -17,7 +17,7 @@ function top($menu=HOME)
     <meta name="author" content="">
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap"
           rel="stylesheet">
-    <title>PHPJabbers.com | Free Mobile Store Website Template</title>
+    <title>Bróculos Store</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -31,13 +31,13 @@ function top($menu=HOME)
 <body>
 
 <!-- ***** Preloader Start ***** -->
-<div id="preloader">
-    <div class="jumper">
-        <div></div>
-        <div></div>
-        <div></div>
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
     </div>
-</div>
 <!-- ***** Preloader End ***** -->
 
 <!-- Header -->
@@ -104,7 +104,7 @@ function top($menu=HOME)
                             <a class="nav-link" data-toggle="modal" data-target="#sair">Logout</a>
                             </li>
                             <li class="nav-item">
-                            <a class="nav-link" href="perfil.php?id=<?php echo $dadosPerfis['perfilId'] ?>">
+                            <a class="nav-link <?php if($menu==PERFIL) echo " active "?>" href="perfil.php?id=<?php echo $dadosPerfis['perfilId'] ?>">
                                <?php echo $dadosPerfis['perfilNome'] ?></a>
                             </li>
 
@@ -276,11 +276,14 @@ function bot($menu=HOME, $id=0)
                 <div class="col-md-4 footer-item">
                     <h4>Páginas</h4>
                     <ul class="menu-list">
+                        <li><a href="Home.php">Home</a></li>
                         <li><a href="products.php">Telemóveis</a></li>
                         <li><a href="capas.php">Capas</a></li>
                         <li><a href="carregadores.php">Carregadores</a></li>
-                        <li><a href="fones.php">Fones</a></li>
-                        <li><a href="about.php">Sobre Nós</a></li>
+                        <li><a href="phones.php">phones</a></li>
+                        <li><a href="checkout.php">Carrinho</a></li>
+                        <li><a href="Comparativo.php">Comparativo</a></li>
+
                     </ul>
                 </div>
                 <div class="col-md-4 footer-item last-item">

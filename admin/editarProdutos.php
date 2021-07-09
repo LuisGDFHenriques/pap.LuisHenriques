@@ -107,7 +107,14 @@ $dados=mysqli_fetch_array($result);
                             $result=mysqli_query($con,$sql);
                             while ($dados=mysqli_fetch_array($result)){
                                 ?>
-                                <option value="<?php echo $dados['categoriaId']?>"><?php echo $dados['categoriaNome']?></option>
+                                <option value="<?php echo $dados['categoriaId']?>"
+                                    <?php
+                                    if($dados['categoriaChaveId']==$dados['categoriaId'])
+                                        echo " selected ";
+                                    ?>
+                                >
+                                    <?php echo $dados['categoriaNome']?>
+                                </option>
                                 <?php
                             }
 
