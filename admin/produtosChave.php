@@ -6,6 +6,21 @@ $result=mysqli_query($con,$sql);
 $dadosProduto=mysqli_fetch_array($result);
 top();
 ?>
+<script>
+        function confirmaElimina(id) {
+            $.ajax({
+                url:"AJAX/AJAXGetNameTelemoveis.php",
+                type:"post",
+                data:{
+                    idTelemovel:id
+                },
+                success:function (result){
+                    if(confirm('Confirma que deseja eliminar o telemovel:'+result+"?"))
+                        window.location="eliminaTelemoveisChaves.php?id=" + id;
+                }
+            })
+        };
+</script>
 
 <div class="container">
     <div class="services">
@@ -71,7 +86,7 @@ from categoriachaves inner join categorias on categoriaId =categoriaChaveCategor
                                     <td><?php echo $dados['chaveNome']?></td>
                                     <td><?php echo $dados['produtoChaveValor']?></td>
 
-                                    <td><a class='btn btn-danger btn-xs' href="" onclick="confirmaElimina(<?php echo $dados['chaveId']?>);"> <i class='fa fa-trash'></i>Eliminar</a></td>
+                                    <td><a class='btn btn-danger btn-xs' href="eliminaTelemoveisChaves.php" onclick="confirmaElimina(<?php echo $dados['chaveId']?>);"> <i class='fa fa-trash'></i>Eliminar</a></td>
 
                                 </tr>
                                 <?php

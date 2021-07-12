@@ -13,7 +13,7 @@ top();
                 idProduto:id
             },
             success:function (result){
-                if(confirm('Confirma que deseja eliminar o telemovel:'+result+"?"))
+                if(confirm('Confirma que deseja eliminar o produto: '+result+"?"))
                     window.location="eliminaProduto.php?id=" + id;
             }
         })
