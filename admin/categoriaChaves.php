@@ -1,9 +1,6 @@
 <?php
 include_once("includes/body.inc.php");
-$sql="Select * from categoriachaves left join categorias on categoriaChaveCategoriaId = categoriaId
-        order by categoriaNome
-
-";
+$sql="Select * from categoriachaves left join categorias on categoriaChaveCategoriaId = categoriaId order by categoriaNome";
 $result=mysqli_query($con,$sql);
 top();
 ?>
@@ -54,10 +51,6 @@ top();
                             echo $dados['categoriaChaveTipo'];
                         else
                             echo $dados['categoriaNome'];
-
-
-
-
                         ?></td>
                         <td><a href="editarCategoriaChave.php?id=<?php echo $dados['categoriaChaveId']?>"><span class="btn-sm btn-primary">Edita</span></a></td>
                         <td><span onclick="confirmaElimina(<?php echo $dados['categoriaChaveId']?>)" class="btn-sm btn-danger">Elimina</span></td>

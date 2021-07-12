@@ -1,6 +1,6 @@
 <?php
 include_once("includes/body.inc.php");
-$sql="Select * from chaves inner join categoriachaves on chaveCategoriaChaveId = categoriaChaveId";
+$sql="Select * from chaves inner join categoriachaves on chaveCategoriaChaveId = categoriaChaveId order by chaveNome";
 $result=mysqli_query($con,$sql);
 top();
 ?>
@@ -50,7 +50,6 @@ top();
                         <?php
                     }
                     ?>
-
                     </table>
             </div>
         </div>

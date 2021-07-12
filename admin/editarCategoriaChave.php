@@ -3,7 +3,7 @@ include_once ("includes/body.inc.php");
 top();
 
 $id=intval($_GET['id']);
-$sql="Select * from categoriachaves inner join categorias on categoriaChaveCategoriaId = categoriaId";
+$sql="Select * from categoriachaves where categoriaChaveId = ".$id;
 $result=mysqli_query($con,$sql);
 $dados=mysqli_fetch_array($result);
 
@@ -19,7 +19,25 @@ $dados=mysqli_fetch_array($result);
                         <input type="hidden" name="categoriaChaveId" value="<?php echo $id?>">
                         <label for="nomeCategoriaChave">Nome: </label>
                         <input type="text" class="form-control" id="nomeCategoriaChave" name="nomeCategoriaChave" value="<?php echo $dados['categoriaChaveNome']?>"><br>
-                        <select name="Categoria">
+                        <div class="form-group">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="tipoCategoria" id="inlineRadio1" value="geral" <?php
+                                if ($dados['categoriaChaveTipo'] == "geral"){
+                                    echo "checked";
+                                } ?>
+                                >
+                                <label class="form-check-label" for="inlineRadio1">Geral (aparece em todos os produtos)</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="tipoCategoria" id="inlineRadio2" value="especifico" <?php
+                                if ($dados['categoriaChaveTipo'] == "especifico"){
+                                    echo "checked";
+                                } ?>
+                                >
+                                <label class="form-check-label" for="inlineRadio2">Específico (a uma categoria de produtos)</label>
+                            </div>
+                        </div><br>
+                        <select name="Categoria" class="form-control">
                             <option value="-1">Escolha a categoria...</option>
                             <?php
                             $sql="select * from categorias order by categoriaNome";

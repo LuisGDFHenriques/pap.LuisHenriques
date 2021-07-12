@@ -1,6 +1,6 @@
 <?php
 include_once("includes/body.inc.php");
-$sql="Select * from categorias  ";
+$sql="Select * from categorias";
 $result=mysqli_query($con,$sql);
 top();
 ?>

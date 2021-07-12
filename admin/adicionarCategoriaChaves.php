@@ -27,7 +27,7 @@ top()
                         </div>
                         <div class="form-group">
                             <label for="Categoria"> Categoria</label>
-                            <select name="categoria" class="form-control">
+                            <select name="Categoria" class="form-control">
                                 <option value="-1">Escolha a categoria...</option>
                                 <?php
                                 $sql="select * from categorias order by categoriaNome";

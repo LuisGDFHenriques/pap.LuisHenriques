@@ -100,30 +100,29 @@ $dados=mysqli_fetch_array($result);
                         <br>
                         <div class="form-group">
                         <label for="produtoCategoria"> Categoria:</label>
-                        <select name="produtoCategoria" class="form-control">
-                            <option value="-1">Escolha a categoria...</option>
-                            <?php
-                            $sql="select * from categorias order by categoriaNome";
-                            $result=mysqli_query($con,$sql);
-                            while ($dados=mysqli_fetch_array($result)){
-                                ?>
-                                <option value="<?php echo $dados['categoriaId']?>"
-                                    <?php
-                                    if($dados['categoriaChaveId']==$dados['categoriaId'])
-                                        echo " selected ";
-                                    ?>
-                                >
-                                    <?php echo $dados['categoriaNome']?>
-                                </option>
+                            <select name="Categoria" class="form-control">
+                                <option value="-1">Escolha a categoria...</option>
                                 <?php
-                            }
-
-                            ?>
-                        </select>
+                                $sql="select * from categorias order by categoriaNome";
+                                $resultCategorias=mysqli_query($con,$sql);
+                                while ($dadosCategorias=mysqli_fetch_array($resultCategorias)){
+                                    ?>
+                                    <option value="<?php echo $dadosCategorias['categoriaId']?>"
+                                        <?php
+                                        if($dados['produtoCategoriaId']==$dadosCategorias['categoriaId'])
+                                            echo " selected ";
+                                        ?>
+                                    >
+                                        <?php echo $dadosCategorias['categoriaNome']?>
+                                    </option>
+                                    <?php
+                                }
+                                ?>
+                            </select>
                         </div>
                         <br>
                         <div class="form-group">
-                        <label for="produtoMarca"> Marca:</label>
+                        <label for="produtoMarcaId"> Marca:</label>
                         <select name="prodotuMarcaId" class="form-control">
                             <option value="-1">Escolha a marca...</option>
                             <?php

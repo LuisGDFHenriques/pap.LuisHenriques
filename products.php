@@ -16,17 +16,19 @@ $result = mysqli_query($con, $sql);
 </div>
 
 <div align="center">
-    <a>Pesquisar</a>
-    <input autocomplete="on" id="search" type="text" value="" defaultval="Pesquisar..." style="margin: 0px;">
-    <a>Ordenar por:</a>
-    <select>
+    <table>
+        <tr>
+    <td><a>Pesquisar</a>
+    <input class="form-control" autocomplete="on" id="search" type="text" value="" defaultval="Pesquisar..." style="margin: 0px;"></td>
+    <td><a>Ordenar por:</a>
+    <select class="form-control" >
         <option selected="selected" value="created_at:desc">Mais recente</option>
         <option value="filter_float_price:asc">Mais barato</option>
         <option value="filter_float_price:desc">Mais caro</option>
         <option value="filter_float_price:desc">Maior numero de favoritos</option>
-    </select>
-    <a>Marca:</a>
-    <select name="telemovelMarca" id="searchMarca">
+    </select></td>
+    <td><a>Marca:</a>
+    <select name="telemovelMarca" id="searchMarca" class="form-control">
         <option value="-1">Escolha a marca...</option>
         <?php
         $sqlM="select * from marcas order by marcaNome";
@@ -38,7 +40,9 @@ $result = mysqli_query($con, $sql);
         }
 
         ?>
-    </select>
+    </select></td>
+        </tr>
+    </table>
 </div>
 <div class="services">
     <div class="container">

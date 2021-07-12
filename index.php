@@ -19,28 +19,7 @@ top(HOME);
           </div>
           <!-- // Item -->
           <!-- Item -->
-          <div class="item item-2">
-            <div class="img-fill">
-                <div class="text-content">
-                  <h6>Descubra mais sobre nós!</h6>
-                  <a style="color:#FFFFFF"><h3>Obtenha mais informações sobre o nosso site<br></h3></a>
-                  <p></p>
-                  <a href="about.php" class="filled-button">Sobre Nós</a>
-                </div>
-            </div>
-          </div>
-          <!-- // Item -->
-          <!-- Item -->
-          <div class="item item-3">
-            <div class="img-fill">
-                <div class="text-content">
-                  <h6>Algum problema?</h6>
-                  <a style="color:#FFFFFF"><h3>Se estivere com algum problema contacta-nos para o podermos ajudar de forma eficiente.<br></h3></a>
-                  <p></p>
-                  <a href="contact.html" class="filled-button">Contacta-nos</a>
-                </div>
-            </div>
-          </div>
+
           <!-- // Item -->
         </div>
     </div>

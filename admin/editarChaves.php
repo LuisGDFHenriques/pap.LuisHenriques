@@ -3,10 +3,9 @@ include_once ("includes/body.inc.php");
 top();
 
 $id=intval($_GET['id']);
-$sql="Select * from chaves inner join categoriachaves on chaveCategoriaChaveId = categoriaChaveId";
+$sql="Select * from chaves inner join categoriachaves on chaveCategoriaChaveId = categoriaChaveId where chaveId = $id";
 $result=mysqli_query($con,$sql);
 $dados=mysqli_fetch_array($result);
-
 ?>
     <div class="services">
         <div class="container">
@@ -19,7 +18,7 @@ $dados=mysqli_fetch_array($result);
                         <input type="hidden" name="chaveId" value="<?php echo $id?>">
                         <label for="nomeChave">Nome: </label>
                         <input type="text" class="form-control" id="nomeChave" name="nomeChave" value="<?php echo $dados['chaveNome']?>"><br>
-                        <select name="chaveCategoria">
+                        <select name="chaveCategoria" class="form-control">
                             <option value="-1">Escolha a categoria...</option>
                             <?php
                             $sql="select * from categoriachaves order by categoriaChaveNome";
