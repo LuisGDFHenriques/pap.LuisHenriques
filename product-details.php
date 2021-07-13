@@ -13,7 +13,7 @@ $dados=mysqli_fetch_array($res);
         <div class="row">
           <div class="col-md-12">
             <span>
-                <?php echo $dados['produtoPreco']?>€
+                <h3><?php echo $dados['produtoNome']?></h3>
             </span>
           </div>
         </div>
@@ -52,7 +52,7 @@ $dados=mysqli_fetch_array($res);
           <div class="col-md-5">
             <div class="sidebar-item recent-posts">
               <div class="sidebar-heading">
-                <h4><?php echo $dados['produtoNome']?></h4>
+                <h5><?php echo $dados['produtoPreco']?>€</h5>
               </div>
               <div class="content">
                 <p></p>
