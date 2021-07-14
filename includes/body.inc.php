@@ -216,12 +216,44 @@ function bot($menu=HOME, $id=0)
                             <input type="email" name="email" class="form-control" id="InputEmail">
                         </div>
                         <div class="form-group">
-                            <label for="InputPassword1">Palavra-passe</label>
+                            <label for="InputPassword1">Palavra-passe:</label>
                             <input type="password" name="password" class="form-control" id="InputPassword1">
                         </div>
                         <div class="form-group">
-                            <label for="InputPassword1">Confirma palavra-passe</label>
+                            <label for="InputPassword1">Confirma palavra-passe:</label>
                             <input type="password" class="form-control" id="InputPassword2">
+                        </div>
+                        <div class="form-group">
+                            <label for="Morada">Morada:</label>
+                            <input type="text" name="Morada" class="form-control" id="Morada">
+                        </div>
+                        <div class="form-group">
+                            <label for="Cidade">Cidade:</label>
+                            <input type="text" name="Cidade" class="form-control" id="Cidade">
+                        </div>
+                        <div class="form-group">
+                            <label for="Telemovel">Telemovel:</label>
+                            <input type="text" name="Telemovel" class="form-control" id="Telemovel">
+                        </div>
+                        <div class="form-group">
+                            <label for="Pais"> Pais:</label>
+                            <select name="Pais" id="Pais" class="form-control">
+                                <option value="-1">Escolha o pais</option>
+                                <?php
+                                $con=mysqli_connect(HOST,USER,PWD,DATABASE);
+                                $sql="select * from paises order by paisNome";
+                                $result=mysqli_query($con,$sql);
+                                while ($dados=mysqli_fetch_array($result)){
+                                    ?>
+                                    <option value="<?php echo $dados['paisId']?>"><?php echo $dados['paisNome']?></option>
+                                    <?php
+                                }
+                                ?>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="CodigoPostal">Código Postal:</label>
+                            <input type="text" name="CodigoPostal" class="form-control" id="CodigoPostal">
                         </div>
 
                 </div>

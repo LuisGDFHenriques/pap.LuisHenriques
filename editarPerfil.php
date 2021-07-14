@@ -1,7 +1,7 @@
 <?php
 include_once ("includes/body.inc.php");
 top(PERFIL);
-$sql = "select * from perfis inner join paises on perfilPaisId = paisId where perfilId=" . $_SESSION['id'];
+$sql = "select * from perfis inner join paises on perfilPaisId = paisId where perfilId=" .$_SESSION['id'];
 $result = mysqli_query($con, $sql);
 $dados = mysqli_fetch_array($result)
 ?>
