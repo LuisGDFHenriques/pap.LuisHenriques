@@ -5,6 +5,10 @@ $con->set_charset("utf8");
 
 function top($menu=HOME)
 {
+    global $con;
+    $sql="select * from categorias";
+    $res=mysqli_query($con,$sql);
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -59,14 +63,18 @@ function top($menu=HOME)
                         </a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="dropdown-toggle nav-link <?php if($menu==TELEMOVEIS) echo " active "?> " data-toggle="dropdown" href="#" role="button"
+                        <a class="dropdown-toggle nav-link <?php if($menu==PRODUTOS) echo " active "?> " data-toggle="dropdown" href="#" role="button"
                            aria-haspopup="true" aria-expanded="false">Produtos</a>
 
                         <div class="dropdown-menu">
-                            <a class="dropdown-item" href="products.php">Telemoveis</a>
-                            <a class="dropdown-item" href="capas.php">Capas</a>
-                            <a class="dropdown-item" href="carregadores.php">Carregadores</a>
-                            <a class="dropdown-item" href="phones.php">Phones</a>
+                            <?php
+                            while( $dados=mysqli_fetch_array($res)){
+                            ?>
+                            <a class="dropdown-item" href="products.php?cat=<?php echo $dados['categoriaId']?>"><?php echo $dados['categoriaNome']?></a>
+                            <?php
+                            }
+                            ?>
+
                         </div>
                     </li>
                     <li class="nav-item">
@@ -151,15 +159,18 @@ function bot($menu=HOME, $id=0)
         $('document').ready(function () {
 
             <?php
-            if ($menu == TELEMOVEIS){
+            if ($menu == PRODUTOS){
             ?>
             $('#search').keyup(function () {
-                fillTableTelemoveis(this.value, $('#searchMarca'). val());
+                fillTableProdutos(this.value, $('#searchMarca'). val(),<?php echo $id?>,$('#ordenar'). val());
             });
             $('#searchMarca').change(function () {
-                fillTableTelemoveis($('#search'). val(), this.value);
+                fillTableProdutos($('#search'). val(), this.value,<?php echo $id?>,$('#ordenar'). val());
             });
-            fillTableTelemoveis();
+            $('#ordenar').change(function () {
+                fillTableProdutos($('#search'). val(), $('#searchMarca'). val(),<?php echo $id?>,this.value);
+            });
+            fillTableProdutos('',-1,<?php echo $id?>,1);
             <?php
             }
             ?>

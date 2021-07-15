@@ -1,10 +1,12 @@
-function fillTableTelemoveis(txt = '', id= -1) {
+function fillTableProdutos(txt = '', marca= -1, cat=-1, ordem=1) {
     $.ajax({
         url: "AJAX/AJAXFillTelemoveis.php",
         type: "post",
         data: {
             txt: txt,
-            id: id
+            idMarca: marca,
+            idCategoria: cat,
+            ordem: ordem
         },
         success: function (result) {
             $('#tableContent').html(result);

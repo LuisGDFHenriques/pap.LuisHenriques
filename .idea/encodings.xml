@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/AJAX/AJAXFillTelemoveis.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/admin/adicionarCategoriaChaves.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/admin/adicionarCategorias.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/admin/adicionarChave.php" charset="UTF-8" />
@@ -18,6 +19,7 @@
     <file url="file://$PROJECT_DIR$/admin/marcas.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/admin/produtos.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/admin/produtosChave.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/products.php" charset="UTF-8" />
     <file url="PROJECT" charset="ISO-8859-1" />
   </component>
 </project>

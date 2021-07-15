@@ -4,7 +4,7 @@ define("USER","root");
 define("PWD","");
 define("DATABASE","pap2021telemoveis");
 define("HOME",0);
-define("TELEMOVEIS",1);
+define("PRODUTOS",1);
 define("COMPARATIVO",2);
 define("CARRINHO",3);
 define("PERFIL",4);
