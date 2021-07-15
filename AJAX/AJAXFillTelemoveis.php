@@ -20,8 +20,10 @@ while ($dados = mysqli_fetch_array($result)){
     <div class="col-md-4">
         <div class="service-item">
             <img src="<?php echo $dados['produtoImagemURL']?>" alt="">
-            <div class="down-content">
-                <h4><?php echo $dados['produtoNome']?></h4>
+            <div class="down-content" >
+                <div align="center">
+                <h5><?php echo $dados['produtoNome']?></h5>
+                </div>
                 <div style="margin-bottom:10px;">
                   <span>
                       <?php echo $dados['produtoPreco']?>?
@@ -30,9 +32,9 @@ while ($dados = mysqli_fetch_array($result)){
                 <p></p>
                 <a href="product-details.php?id=<?php echo $dados['produtoId']?>" class="filled-button">Ver mais</a>
                 <br>
-                <input type="checkbox"><a class=""> Favoritos</a>
+                <input type="checkbox"><a class="form-group"> Favoritos</a>
                 <br>
-                <input type="checkbox"><a class=""> Comparar</a>
+                <input type="checkbox" class="form-group"><a class="form-group"> Comparar</a>
             </div>
 
         </div>

@@ -22,6 +22,5 @@ if(mysqli_affected_rows($con)==1){ // inseriu com sucesso
         $_SESSION['nome']=$nome;
     }
 }
-
 header("location:index.php");
 ?>

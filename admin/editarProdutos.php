@@ -100,7 +100,7 @@ $dados=mysqli_fetch_array($result);
                         <br>
                         <div class="form-group">
                         <label for="produtoCategoria"> Categoria:</label>
-                            <select name="Categoria" class="form-control">
+                            <select name="produtoCategoria" class="form-control">
                                 <option value="-1">Escolha a categoria...</option>
                                 <?php
                                 $sql="select * from categorias order by categoriaNome";
@@ -123,7 +123,7 @@ $dados=mysqli_fetch_array($result);
                         <br>
                         <div class="form-group">
                         <label for="produtoMarcaId"> Marca:</label>
-                        <select name="prodotuMarcaId" class="form-control">
+                        <select name="produtoMarcaId" class="form-control">
                             <option value="-1">Escolha a marca...</option>
                             <?php
                             $sql="select * from marcas order by marcaNome";

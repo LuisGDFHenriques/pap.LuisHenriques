@@ -10,8 +10,7 @@ $idMar=intval($_POST['produtoMarcaId']);
 $idCat=intval($_POST['produtoCategoria']);
 $imagem=$_FILES['imagemProduto']['name'];
 $novoNome="../images/".$imagem;
-copy($_FILES['imagemProduto']['tmp_name'],$novoNome);
-$sql="UPDATE produtos SET produtoNome='".$modelo."', produtoMarcaId='".$idMar."', produtoDescricao='".$descricao."', produtoPreco='".$preco."', produtoCategoriaId='".$idCat."', produtoDestaque='".$destaque."'";
+echo $sql="UPDATE produtos SET produtoNome='".$modelo."', produtoMarcaId='".$idMar."', produtoDescricao='".$descricao."', produtoPreco='".$preco."', produtoCategoriaId='".$idCat."', produtoDestaque='".$destaque."'";
 if($imagem!=''){
     $sql.=", produtoImagemURL='images/".$imagem."'";
     copy($_FILES['imagemProduto']['tmp_name'],$novoNome);

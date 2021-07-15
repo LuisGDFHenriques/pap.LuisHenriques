@@ -190,7 +190,6 @@ function bot($menu=HOME, $id=0)
                     </form>
                 </div>
                 <div class="modal-footer">
-
                 </div>
             </div>
         </div>
