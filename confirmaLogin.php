@@ -15,8 +15,8 @@ if(mysqli_affected_rows($con)==1){ // um único login
         $_SESSION['id']=$dados['userId'];
         $_SESSION['nome']=$dados['perfilNome'];
         $_SESSION['carrinho'][0][0]=-1;
-     //   $teste=array(0 => 0);
-      //  array_push($_SESSION['carrinho'],$teste);
+        $teste=array(0 => 0);
+        array_push($_SESSION['carrinho'],$teste);
     }
 }
 header("location:index.php");

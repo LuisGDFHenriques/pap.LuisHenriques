@@ -47,15 +47,16 @@ $resVendidos=mysqli_query($con,$sql);
                 ?>
                 <div class="col-md-4">
                     <div class="service-item">
-                        <img src="assets/images/SAMSUNGZFOLD2.jpg" alt="">
+                        <img src="<?php echo $dados['produtoImagemURL']?>" alt="">
                         <div class="down-content">
-                            <h4>SAMSUNG Z FOLD 2</h4>
-                            <div style="margin-bottom:10px;">
-                                <span> <del><sup>$</sup>2000.00</del>  <sup>$</sup>1700.00 </span>
+                            <div align="center" style="min-height: 70px">
+                            <h4><?php echo $dados['produtoNome']?></h4>
                             </div>
-
+                            <div style="margin-bottom:10px;">
+                                <span><?php echo $dados['produtoPreco']?>&euro;</span>
+                            </div>
                             <p></p>
-                            <a href="product-details.html" class="filled-button">Ver Mais</a>
+                            <a href="product-details.php?id=<?php echo $dados['produtoId']?>" class="filled-button">Ver Mais</a>
                         </div>
                     </div>
 
@@ -86,15 +87,17 @@ $resVendidos=mysqli_query($con,$sql);
                 ?>
                 <div class="col-md-4">
                     <div class="service-item">
-                        <img src="assets/images/SAMSUNGZFOLD2.jpg" alt="">
+                        <img src="<?php echo $dados['produtoImagemURL']?>" alt="">
                         <div class="down-content">
-                            <h4>SAMSUNG Z FOLD 2</h4>
+                            <div align="center" style="min-height: 70px">
+                                <h4><?php echo $dados['produtoNome']?></h4>
+                            </div>
                             <div style="margin-bottom:10px;">
-                                <span> <del><sup>$</sup>2000.00</del>  <sup>$</sup>1700.00 </span>
+                                <span><?php echo $dados['produtoPreco']?>&euro;</span>
                             </div>
 
                             <p></p>
-                            <a href="product-details.html" class="filled-button">Ver Mais</a>
+                            <a href="product-details.php?id=<?php echo $dados['produtoId']?>" class="filled-button">Ver Mais</a>
                         </div>
                     </div>
 

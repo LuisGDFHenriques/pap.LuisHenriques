@@ -39,7 +39,7 @@ while ($dados = mysqli_fetch_array($result)){
             <img src="<?php echo $dados['produtoImagemURL']?>" alt="">
             <div class="down-content" >
                 <div align="center" style="min-height: 70px">
-                <h5><?php echo $dados['produtoNome']?> teste teste teste</h5>
+                <h5><?php echo $dados['produtoNome']?></h5>
                 </div>
                 <div style="margin-bottom:10px;">
                   <span>
