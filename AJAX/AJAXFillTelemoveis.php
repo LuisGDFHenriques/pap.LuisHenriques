@@ -49,7 +49,6 @@ while ($dados = mysqli_fetch_array($result)){
                 <p></p>
                 <a href="product-details.php?id=<?php echo $dados['produtoId']?>" class="filled-button">Ver mais</a>
                 <br>
-                <input type="checkbox"><a class="form-group"> Favoritos</a>
                 <br>
                 <input type="checkbox" class="form-group"><a class="form-group"> Comparar</a>
             </div>

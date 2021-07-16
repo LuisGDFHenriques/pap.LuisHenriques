@@ -70,7 +70,7 @@ $dados = mysqli_fetch_array($result)
                         </select>
                     </div>
                     <br>
-                    <button type="submit" class="btn btn-primary">Confirma alterações</button>
+                    <button type="submit" class="btn btn-primary">Confirma alteraÃ§Ãµes</button>
                     <br>
                 </form>
             </div>
