@@ -1,6 +1,13 @@
 <?php
 include_once ("includes/body.inc.php");
 top(HOME);
+$sql="select * from produtos order by produtoId desc limit 3";
+$resRecentes=mysqli_query($con,$sql);
+
+$sql="select produtoId, produtos.*, sum(encomendaDetalheQuantidade) as totalP from produtos inner join encomendadetalhes
+        on produtoId=encomendaDetalheProdutoId group by 1 order by totalP desc limit 3";
+$resVendidos=mysqli_query($con,$sql);
+
 ?>
     <!-- Page Content -->
     <!-- Banner Starts Here -->
@@ -35,51 +42,30 @@ top(HOME);
               <span></span>
             </div>
           </div>
-          <div class="col-md-4">
-            <div class="service-item">
-              <img src="assets/images/SAMSUNGZFOLD2.jpg" alt="">
-              <div class="down-content">
-                <h4>SAMSUNG Z FOLD 2</h4>
-                <div style="margin-bottom:10px;">
-                  <span> <del><sup>$</sup>2000.00</del>  <sup>$</sup>1700.00 </span>
+            <?php
+            while ($dados=mysqli_fetch_array($resRecentes)){
+                ?>
+                <div class="col-md-4">
+                    <div class="service-item">
+                        <img src="assets/images/SAMSUNGZFOLD2.jpg" alt="">
+                        <div class="down-content">
+                            <h4>SAMSUNG Z FOLD 2</h4>
+                            <div style="margin-bottom:10px;">
+                                <span> <del><sup>$</sup>2000.00</del>  <sup>$</sup>1700.00 </span>
+                            </div>
+
+                            <p></p>
+                            <a href="product-details.html" class="filled-button">Ver Mais</a>
+                        </div>
+                    </div>
+
+                    <br>
                 </div>
+            <?php
+            }
+            ?>
 
-                <p></p>
-                <a href="product-details.html" class="filled-button">Ver Mais</a>
-              </div>
-            </div>
-            
-            <br>
-          </div>
-          <div class="col-md-4">
-            <div class="service-item">
-              <img src="assets/images/Iphone12.jpg" alt="">
-              <div class="down-content">
-                <h4>IPHONE 12</h4>
-                <div style="margin-bottom:10px;">
-                  <span> <del><sup>$</sup>2000.00</del>  <sup>$</sup>1700.00 </span>
-                </div>
 
-                <p></p>
-                <a href="product-details.html" class="filled-button">Ver Mais</a>
-              </div>
-            </div>
-
-            <br>
-          </div>
-          <div class="col-md-4">
-            <div class="service-item">
-              <img src="assets/images/Iphone11.jpg" alt="">
-              <div class="down-content">
-                <h4>IPHONE 11</h4>
-                <div style="margin-bottom:10px;">
-                  <span> <del><sup>$</sup>2000.00</del>  <sup>$</sup>1700.00 </span>
-                </div>
-
-                <p></p>
-                <a href="product-details.html" class="filled-button">Ver Mais</a>
-              </div>
-            </div>
 
             <br>
           </div>
@@ -95,54 +81,30 @@ top(HOME);
               <span></span>
             </div>
           </div>
-          <div class="col-md-4">
-            <div class="service-item">
-              <img src="assets/images/IPHONE8.gif" alt="">
-              <div class="down-content">
-                <h4>IPHONE 8</h4>
-                <div style="margin-bottom:10px;">
-                  <span> <del><sup>$</sup>2000.00</del>  <sup>$</sup>1700.00 </span>
+            <?php
+            while ($dados=mysqli_fetch_array($resVendidos)){
+                ?>
+                <div class="col-md-4">
+                    <div class="service-item">
+                        <img src="assets/images/SAMSUNGZFOLD2.jpg" alt="">
+                        <div class="down-content">
+                            <h4>SAMSUNG Z FOLD 2</h4>
+                            <div style="margin-bottom:10px;">
+                                <span> <del><sup>$</sup>2000.00</del>  <sup>$</sup>1700.00 </span>
+                            </div>
+
+                            <p></p>
+                            <a href="product-details.html" class="filled-button">Ver Mais</a>
+                        </div>
+                    </div>
+
+                    <br>
                 </div>
+                <?php
+            }
+            ?>
 
-                <p></p>
-                <a href="product-details.html" class="filled-button">Ver Mais</a>
-              </div>
-            </div>
 
-            <br>
-          </div>
-          <div class="col-md-4">
-            <div class="service-item">
-              <img src="assets/images/Iphonex.jpg" alt="">
-              <div class="down-content">
-                <h4>IPHONE X</h4>
-                <div style="margin-bottom:10px;">
-                  <span> <del><sup>$</sup>2000.00</del>  <sup>$</sup>1700.00 </span>
-                </div>
-
-                <p></p>
-                <a href="product-details.html" class="filled-button">Ver Mais</a>
-              </div>
-            </div>
-
-            <br>
-          </div>
-          <div class="col-md-4">
-            <div class="service-item">
-              <img src="assets/images/Iphone11.jpg" alt="">
-              <div class="down-content">
-                <h4>IPHONE 11</h4>
-                <div style="margin-bottom:10px;">
-                  <span> <del><sup>$</sup>2000.00</del>  <sup>$</sup>1700.00 </span>
-                </div>
-
-                <p></p>
-                <a href="product-details.html" class="filled-button">Ver Mais</a>
-              </div>
-            </div>
-
-            <br>
-          </div>
         </div>
       </div>
     </div>

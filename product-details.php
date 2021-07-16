@@ -90,8 +90,8 @@ $dados=mysqli_fetch_array($res);
                   <div class="form-group">
 
                       <?php if(isset($_SESSION['id'])){ ?>
-                          <a class="form-group" href="#" onclick="adicionaCarrinho(<?php echo $id?>)">
-                              <input type="submit" class="primary" value="Adicionar ao Carrinho"></a>
+
+                              <input onclick="adicionaCarrinho(<?php echo $id?>)" class="btn btn-success" value="Adicionar ao Carrinho">
                       <?php }else{ ?>
                           <a class="form-group" data-toggle="modal" data-target="#carrinho"><input type="submit" class="primary" value="Adicionar ao Carrinho"></a>
 

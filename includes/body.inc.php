@@ -8,7 +8,7 @@ function top($menu=HOME)
     global $con;
     $sql="select * from categorias";
     $res=mysqli_query($con,$sql);
-    $_SESSION['carrinho'][0]=-1;
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
