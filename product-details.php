@@ -1,6 +1,6 @@
 <?php
 include_once ("includes/body.inc.php");
-top();
+top(PRODUTOS);
 $id=intval($_GET['id']);
 $sql="select * from produtos where produtoId=$id";
 $res=mysqli_query($con,$sql);
@@ -88,7 +88,15 @@ $dados=mysqli_fetch_array($res);
               </div>
                 <div class="col-lg-12">
                   <div class="form-group">
-                    <a href="#"class="filled-button">Adiciona ao carrinho</a>
+
+                      <?php if(isset($_SESSION['id'])){ ?>
+                          <a class="form-group" href="#" onclick="adicionaCarrinho(<?php echo $id?>)">
+                              <input type="submit" class="primary" value="Adicionar ao Carrinho"></a>
+                      <?php }else{ ?>
+                          <a class="form-group" data-toggle="modal" data-target="#carrinho"><input type="submit" class="primary" value="Adicionar ao Carrinho"></a>
+
+                      <?php }?>
+
                   </div>
                 </div>
               </div>
