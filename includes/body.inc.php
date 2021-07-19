@@ -2,6 +2,7 @@
 include_once("config.inc.php");
 $con=mysqli_connect(HOST,USER,PWD,DATABASE);
 $con->set_charset("utf8");
+session_start();
 
 function top($menu=HOME)
 {
@@ -77,11 +78,20 @@ function top($menu=HOME)
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link<?php if($menu==COMPARATIVO) echo " active "?>" href="comparativo.php">Comparativo</a>
+                        <a class="nav-link<?php if($menu==COMPARATIVO) echo " active "?>" href="comparativo.php">Comparativo<?php
+                        $n=0;
+                        if(isset($_SESSION['compara1']))
+                            $n++;
+                        if(isset($_SESSION['compara2']))
+                            $n++;
+
+                        ?>
+                            <span id="nComparativo" class="badge badge-dark"><?php echo $n>0?$n:''?></span>
+
+                        </a>
                     </li>
                     <li>
                     <?php
-                    session_start();
                     if (!isset($_SESSION['id'])){
 
                     ?>

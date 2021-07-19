@@ -82,3 +82,18 @@ function atualizaCarrinho(valor,idProduto){
 
 
 }
+
+function atualizaComparativo(idProduto, idCat){
+    $.ajax({
+        url:"AJAX/AJAXAtualizaProdutoComparativo.php",
+        type:"post",
+        data:{
+            idPrd:idProduto
+        },
+        success:function (result){
+
+            $('#nComparativo').html(parseInt(result)>0?parseInt(result):'');
+            fillTableProdutos($('#search'). val(), $('#searchMarca'). val(),idCat,$('#ordenar'). val());
+        }
+    });
+}

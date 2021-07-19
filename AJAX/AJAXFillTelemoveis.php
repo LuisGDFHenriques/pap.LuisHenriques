@@ -50,7 +50,14 @@ while ($dados = mysqli_fetch_array($result)){
                 <a href="product-details.php?id=<?php echo $dados['produtoId']?>" class="filled-button">Ver mais</a>
                 <br>
                 <br>
-                <input type="checkbox" class="form-group"><a class="form-group"> Comparar</a>
+                <input onclick="atualizaComparativo(<?php echo $dados['produtoId']?>,<?php echo $idCat?>)" type="checkbox"
+                       <?php
+                        if(isset($_SESSION['compara1']) && $_SESSION['compara1']==$dados['produtoId'])
+                            echo ' checked ';
+                        if(isset($_SESSION['compara2']) && $_SESSION['compara2']==$dados['produtoId'])
+                            echo ' checked ';
+                       ?>
+                       class="form-group"><a class="form-group"> Comparar</a>
             </div>
 
         </div>

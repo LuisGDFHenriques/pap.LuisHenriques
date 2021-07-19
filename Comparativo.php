@@ -1,40 +1,43 @@
 <?php
 include_once ("includes/body.inc.php");
 top(COMPARATIVO);
-/* ********************************   dados fixos para alterar ****/
-$id1=2;
-$id2=4;
-/*****************************************************/
+$compara=false;
+if(isset($_SESSION['compara1']) && isset($_SESSION['compara2'])){
+    $id1=$_SESSION['compara1'];
+    $id2=$_SESSION['compara2'];
+    $compara=true;
 
-$sql="select * from produtos where produtoId=".$id1;
-$res=mysqli_query($con,$sql);
-$dadosPrd1=mysqli_fetch_array($res);
+    $sql="select * from produtos where produtoId=".$id1;
+    $res=mysqli_query($con,$sql);
+    $dadosPrd1=mysqli_fetch_array($res);
 
-$sql="select * from produtos where produtoId=".$id2;
-$res=mysqli_query($con,$sql);
-$dadosPrd2=mysqli_fetch_array($res);
+    $sql="select * from produtos where produtoId=".$id2;
+    $res=mysqli_query($con,$sql);
+    $dadosPrd2=mysqli_fetch_array($res);
 
 
 
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++   chaves
-$sql="select *
+    $sql="select *
 from chaves left join categoriachaves on categoriaChaveId=chaveCategoriaChaveId
  left join 
 (select * from produtos inner join produtochaves on produtoId = produtoChaveProdutoId where produtoChaveProdutoId=$id1) as tabela 
 on chaveId = tabela.produtoChaveChaveId
 
 order by categoriaChaveTipo asc ";
-$result1=mysqli_query($con,$sql);
+    $result1=mysqli_query($con,$sql);
 
-$sql="select *
+    $sql="select *
 from chaves left join categoriachaves on categoriaChaveId=chaveCategoriaChaveId
  left join 
 (select * from produtos inner join produtochaves on produtoId = produtoChaveProdutoId where produtoChaveProdutoId=$id2) as tabela 
 on chaveId = tabela.produtoChaveChaveId
 
 order by categoriaChaveTipo asc ";
-$result2=mysqli_query($con,$sql);
+    $result2=mysqli_query($con,$sql);
+
+}
 
 
 
@@ -52,6 +55,9 @@ $result2=mysqli_query($con,$sql);
 
     <div class="services">
       <div class="container">
+          <?php
+            if($compara==true){
+          ?>
         <table width="100%" class="table ">
             <tr>
                 <th width="50%"><h4><?php echo $dadosPrd1['produtoNome']?></h4></th>
@@ -101,12 +107,22 @@ $result2=mysqli_query($con,$sql);
 
             </tr>
         </table>
+          <?php
+          }
+            else{
+                ?>
+                <h1>Tem que escolher 2 produtos para comparar...</h1>
+          <?php
+            }
+          ?>
       </div> <!-- fim do container -->
     </div>
 
 
         <?php
         bot();
+        unset($_SESSION['compara1']);
+        unset($_SESSION['compara2']);
         ?>
   </body>
 </html>
