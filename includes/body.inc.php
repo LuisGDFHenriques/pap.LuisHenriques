@@ -312,19 +312,28 @@ function bot($menu=HOME, $id=0)
                     <p>A nossa loja foi criada em 2/11/2020 com intenção de vender telemoveis rápido e de entrega rapida.</p>
                     <ul class="social-icons">
                         <li><div class="count-area-content">
-                               <div class="count-digit"><?php
-                                   $con=mysqli_connect(HOST,USER,PWD,DATABASE);
-                                   $sql="select count(produtoId) as count_produtos from produtos ";
-                                   $resultCP=mysqli_query($con,$sql);
-                                   $dadosCP=mysqli_fetch_array($resultCP);
-                                   echo $dadosCP['produtoId'];
+                               <div class="count-digit">
+                                   <?php
+                                       $con=mysqli_connect(HOST,USER,PWD,DATABASE);
+                                       $sql="select count(produtoId) as count_produtos from produtos";
+                                       $resultCP=mysqli_query($con,$sql);
+                                       $dadosCP=mysqli_fetch_array($resultCP);
+                                       echo $dadosCP['count_produtos'];
                                    ?>
                                </div>
                                <div class="count-title">Produtos</div>
                             </div></li>
 
                         <li><div class="count-area-content">
-                                <div class="count-digit">3</div>
+                                <div class="count-digit">
+                                    <?php
+                                        $con=mysqli_connect(HOST,USER,PWD,DATABASE);
+                                        $sql="select count(userId) as count_users from users";
+                                        $resultCU=mysqli_query($con,$sql);
+                                        $dadosCU=mysqli_fetch_array($resultCU);
+                                        echo $dadosCU['count_users'];
+                                    ?>
+                                </div>
                                 <div class="count-title">Registrados</div>
                             </div></li>
 

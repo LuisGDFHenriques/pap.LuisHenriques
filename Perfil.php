@@ -33,18 +33,24 @@ $dados = mysqli_fetch_array($result)
                 </tr>
                 <tr>
                     <th>Morada</th><td><?php echo $dados['perfilMorada']?></td>
-                </tr><tr>
+                </tr>
+                <tr>
                     <th>Cidade</th><td><?php echo $dados['perfilCidade']?></td>
-                </tr><tr>
+                </tr>
+                <tr>
                     <th>Telemovel</th><td><?php echo $dados['perfilTelemovel']?></td>
-                </tr><tr>
+                </tr>
+                <tr>
                     <th>Pais</th><td><?php echo $dados['paisNome']?></td>
-                </tr><tr>
+                </tr>
+                <tr>
                     <th>Codigo Postal</th><td><?php echo $dados['perfilCodPostal']?></td>
-                </tr><tr>
+                </tr>
+                <tr>
                 <th width="15%" colspan="2" style="text-align: center"></th><td><a href="editarPerfil.php?id=<?php echo $dados['perfilId']?>"><span class="btn-sm btn-primary">Alterar</span></a></td>
                 </tr>
             </table>
+            <a href="encomendas.php?id=<?php echo $dados['perfilId']?>"><span class="btn-sm btn-primary">Encomendas</span></a>
         </div>
     </div>
 </div>
