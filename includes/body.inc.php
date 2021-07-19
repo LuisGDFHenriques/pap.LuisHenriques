@@ -8,7 +8,6 @@ function top($menu=HOME)
     global $con;
     $sql="select * from categorias";
     $res=mysqli_query($con,$sql);
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -19,8 +18,8 @@ function top($menu=HOME)
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap"
-          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+
     <title>Bróculos Store</title>
 
     <!-- Bootstrap core CSS -->
@@ -45,7 +44,6 @@ function top($menu=HOME)
 <!-- ***** Preloader End ***** -->
 
 <!-- Header -->
-
 
 <header class="">
     <nav class="navbar navbar-expand-lg">
@@ -77,9 +75,7 @@ function top($menu=HOME)
 
                         </div>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link <?php if($menu==CARRINHO) echo " active "?>" href="checkout.php">Carrinho</a>
-                    </li>
+
                     <li class="nav-item">
                         <a class="nav-link<?php if($menu==COMPARATIVO) echo " active "?>" href="comparativo.php">Comparativo</a>
                     </li>
@@ -109,7 +105,10 @@ function top($menu=HOME)
                     <div class="header-right">
                         <div class="user-access">
                             <li class="nav-item">
-                            <a class="nav-link" data-toggle="modal" data-target="#sair">Logout</a>
+                                <a class="nav-link <?php if($menu==CARRINHO) echo " active "?>" href="checkout.php">Carrinho</a>
+                            </li>
+                            <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#sair">Logout</a>
                             </li>
                             <li class="nav-item">
                             <a class="nav-link <?php if($menu==PERFIL) echo " active "?>" href="perfil.php?id=<?php echo $dadosPerfis['perfilId'] ?>">
@@ -303,7 +302,14 @@ function bot($menu=HOME, $id=0)
                     <p>A nossa loja foi criada em 2/11/2020 com intenção de vender telemoveis rápido e de entrega rapida.</p>
                     <ul class="social-icons">
                         <li><div class="count-area-content">
-                               <div class="count-digit">1245</div>
+                               <div class="count-digit"><?php
+                                   $con=mysqli_connect(HOST,USER,PWD,DATABASE);
+                                   $sql="select count(produtoId) as count_produtos from produtos ";
+                                   $resultCP=mysqli_query($con,$sql);
+                                   $dadosCP=mysqli_fetch_array($resultCP);
+                                   echo $dadosCP['produtoId'];
+                                   ?>
+                               </div>
                                <div class="count-title">Produtos</div>
                             </div></li>
 

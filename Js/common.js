@@ -34,7 +34,7 @@ function adicionaCarrinho(id){
             idPrd:id
         },
         success:function(result){
-            alert("O produto adicionado ao carrinho!");
+            alert("O produto foi adicionado ao carrinho!");
         }
     });
 }
@@ -57,7 +57,7 @@ function confirmaEliminaCarrinho(idProduto) {
                         idPrd:idProduto
                     },
                     success:function(result){
-                        alert("O produto eliminado do carrinho!");
+                        alert("O produto foi eliminado do carrinho!");
                     }
                 });
             }

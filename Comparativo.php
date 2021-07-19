@@ -2,8 +2,8 @@
 include_once ("includes/body.inc.php");
 top(COMPARATIVO);
 /* ********************************   dados fixos para alterar ****/
-$id1=1;
-$id2=3;
+$id1=2;
+$id2=4;
 /*****************************************************/
 
 $sql="select * from produtos where produtoId=".$id1;

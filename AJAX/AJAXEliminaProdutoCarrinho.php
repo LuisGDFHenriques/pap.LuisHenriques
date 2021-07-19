@@ -4,8 +4,6 @@ session_start();
 $produto=array($id=>1);
 $cont=0;
 
-
-
 foreach ($_SESSION['carrinho'] as $prod){
     // echo $prod[$id];
     foreach ($prod as $key => $value)
