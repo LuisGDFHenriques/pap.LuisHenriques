@@ -97,3 +97,7 @@ function atualizaComparativo(idProduto, idCat){
         }
     });
 }
+
+function mostrarDetalhes(id){
+    $('#detalhes'+id).toggle();
+}

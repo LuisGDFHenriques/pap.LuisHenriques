@@ -18,9 +18,9 @@ $resVendidos=mysqli_query($con,$sql);
             <div class="img-fill">
                 <div class="text-content">
                   <h6>A qualidade é o que importa!</h6>
-                  <a style="color:#FFFFFF"><h3>Deslumbre-se já com os melhores telmoveis do mercado<br>por preços super acessíveis</h3></a>
+                  <a style="color:#FFFFFF"><h3>Deslumbre-se já com os melhores telemóveis do mercado<br>por preços super acessíveis</h3></a>
                   <p></p>
-                  <a href="products.html" class="filled-button">Produtos</a>
+
                 </div>
             </div>
           </div>
@@ -50,7 +50,7 @@ $resVendidos=mysqli_query($con,$sql);
                         <img src="<?php echo $dados['produtoImagemURL']?>" alt="">
                         <div class="down-content">
                             <div align="center" style="min-height: 70px">
-                            <h4><?php echo $dados['produtoNome']?></h4>
+                            <h5><?php echo $dados['produtoNome']?></h5>
                             </div>
                             <div style="margin-bottom:10px;">
                                 <span><?php echo $dados['produtoPreco']?>&euro;</span>
@@ -90,7 +90,7 @@ $resVendidos=mysqli_query($con,$sql);
                         <img src="<?php echo $dados['produtoImagemURL']?>" alt="">
                         <div class="down-content">
                             <div align="center" style="min-height: 70px">
-                                <h4><?php echo $dados['produtoNome']?></h4>
+                                <h5><?php echo $dados['produtoNome']?></h5>
                             </div>
                             <div style="margin-bottom:10px;">
                                 <span><?php echo $dados['produtoPreco']?>&euro;</span>

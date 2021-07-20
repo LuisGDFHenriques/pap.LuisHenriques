@@ -49,7 +49,7 @@ function top($menu=HOME)
 <header class="">
     <nav class="navbar navbar-expand-lg">
         <div class="container">
-            <a class="navbar-brand" href="index.php"><h2>Brócolos Store</h2></a>
+            <a class="navbar-brand" href="index.php"><h2>Polo Store</h2></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
                     aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -344,11 +344,15 @@ function bot($menu=HOME, $id=0)
                     <h4>Páginas</h4>
                     <ul class="menu-list">
                         <li><a href="Home.php">Home</a></li>
-                        <li><a href="products.php">Telemóveis</a></li>
-                        <li><a href="capas.php">Capas</a></li>
-                        <li><a href="carregadores.php">Carregadores</a></li>
-                        <li><a href="phones.php">phones</a></li>
-                        <li><a href="checkout.php">Carrinho</a></li>
+                        <?php
+                        $sql="select * from categorias";
+                        $res=mysqli_query($con,$sql);
+                        while( $dados=mysqli_fetch_array($res)){
+                            ?>
+                            <li><a href="products.php?cat=<?php echo $dados['categoriaId']?>"><?php echo $dados['categoriaNome']?></a></li>
+                            <?php
+                        }
+                        ?>
                         <li><a href="Comparativo.php">Comparativo</a></li>
                     </ul>
                 </div>
