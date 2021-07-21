@@ -37,7 +37,7 @@ function top()
 
     <section>
             <div class="container">
-                <h2>Brócolos 2 Store - Administração</h2>
+                <h2>Polo Store - Administração</h2>
 
                 <div >
                     <ul class="navbar-nav ml-auto">
