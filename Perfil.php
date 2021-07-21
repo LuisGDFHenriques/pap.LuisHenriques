@@ -47,11 +47,12 @@ $dados = mysqli_fetch_array($result)
                     <th>Codigo Postal</th><td><?php echo $dados['perfilCodPostal']?></td>
                 </tr>
                 <tr>
-                <th width="15%" colspan="2" style="text-align: center"></th><td><a href="editarPerfil.php?id=<?php echo $dados['perfilId']?>"><span class="btn-sm btn-primary">Alterar</span></a></td>
+                <td><a href="editarPerfil.php?id=<?php echo $dados['perfilId']?>"><span class="btn-sm btn-primary">Alterar</span></a></td><td><a href="encomendas.php?id=<?php echo $dados['perfilId']?>"><span class="btn-sm btn-primary">Encomendas</span></a></td>
                 </tr>
             </table>
-            <a href="encomendas.php?id=<?php echo $dados['perfilId']?>"><span class="btn-sm btn-primary">Encomendas</span></a>
+
         </div>
+
     </div>
 </div>
 <div class="services">

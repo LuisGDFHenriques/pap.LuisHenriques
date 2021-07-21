@@ -63,29 +63,7 @@ $dados=mysqli_fetch_array($res);
             <h4>Adiciona ao carrinho</h4>
             <br>
             <form action="" method="post">
-              <div class="row">
-                <div class="col-md-6 col-sm-12">
-                  <div class="form-group">
-                    <label for="">Cor</label>
-                    <select class="form-control">
-                      <option value="0">Bronze</option>
-                      <option value="0">Preto</option>
-                    </select>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-6 col-sm-12">
-                  <div class="form-group">
-                    <label for="">Extra</label>
-                    <select class="form-control">
-                      <option value="0">carregador</option>
-                      <option value="0">carregador, fones</option>
-                      <option value="0">carregador, fones, Capa</option>
-                    </select>
-                  </div>
-                </div>
-              </div>
+
                 <div class="col-lg-12">
                   <div class="form-group">
 
