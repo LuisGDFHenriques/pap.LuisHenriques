@@ -11,7 +11,7 @@
  Target Server Version : 50731
  File Encoding         : 65001
 
- Date: 21/07/2021 16:37:56
+ Date: 21/07/2021 17:00:12
 */
 
 SET NAMES utf8mb4;
@@ -223,25 +223,45 @@ CREATE TABLE `produtochaves`  (
 -- Records of produtochaves
 -- ----------------------------
 INSERT INTO `produtochaves` VALUES (1, 1, 'Bronze');
+INSERT INTO `produtochaves` VALUES (1, 4, 'Rosa');
 INSERT INTO `produtochaves` VALUES (2, 1, '282g');
+INSERT INTO `produtochaves` VALUES (2, 4, '228 g');
 INSERT INTO `produtochaves` VALUES (3, 1, '15.92cm');
+INSERT INTO `produtochaves` VALUES (3, 4, '16.5 cm');
 INSERT INTO `produtochaves` VALUES (4, 1, 'Android');
+INSERT INTO `produtochaves` VALUES (4, 2, 'iOS');
+INSERT INTO `produtochaves` VALUES (4, 4, 'Android');
 INSERT INTO `produtochaves` VALUES (5, 1, '10');
+INSERT INTO `produtochaves` VALUES (5, 2, '13');
+INSERT INTO `produtochaves` VALUES (5, 4, '10');
 INSERT INTO `produtochaves` VALUES (6, 1, 'Snapdragon 865+');
+INSERT INTO `produtochaves` VALUES (6, 2, 'A13 Bionic');
+INSERT INTO `produtochaves` VALUES (6, 4, 'Exynos 2100');
 INSERT INTO `produtochaves` VALUES (7, 1, 'Snapdragon 865+ OctaCore (7nm)');
 INSERT INTO `produtochaves` VALUES (8, 1, 'Octa-Core');
 INSERT INTO `produtochaves` VALUES (9, 1, 'Desbloqueado');
+INSERT INTO `produtochaves` VALUES (9, 4, 'Desbloqueado');
 INSERT INTO `produtochaves` VALUES (10, 1, '6.8 cm/12.82 cm');
+INSERT INTO `produtochaves` VALUES (10, 4, '7.5 cm');
 INSERT INTO `produtochaves` VALUES (11, 1, '6.9 cm/16.8 cm');
+INSERT INTO `produtochaves` VALUES (11, 4, '0.8 cm');
 INSERT INTO `produtochaves` VALUES (12, 1, '12 GB');
 INSERT INTO `produtochaves` VALUES (13, 1, '256 GB');
 INSERT INTO `produtochaves` VALUES (14, 1, '7.6');
 INSERT INTO `produtochaves` VALUES (15, 1, 'Dynamic AMOLED 2x');
 INSERT INTO `produtochaves` VALUES (16, 1, 'QHD+');
 INSERT INTO `produtochaves` VALUES (17, 1, '3');
+INSERT INTO `produtochaves` VALUES (17, 2, '2');
+INSERT INTO `produtochaves` VALUES (17, 4, '4');
 INSERT INTO `produtochaves` VALUES (18, 1, '2');
+INSERT INTO `produtochaves` VALUES (18, 2, '1');
+INSERT INTO `produtochaves` VALUES (18, 4, '1');
 INSERT INTO `produtochaves` VALUES (19, 1, '12+ 12 + 12');
+INSERT INTO `produtochaves` VALUES (19, 2, '12 + 12 MP');
+INSERT INTO `produtochaves` VALUES (19, 4, '108 + 10 + 10 + 12');
 INSERT INTO `produtochaves` VALUES (20, 1, '10');
+INSERT INTO `produtochaves` VALUES (20, 2, '12 MP');
+INSERT INTO `produtochaves` VALUES (20, 4, '40 MP');
 
 -- ----------------------------
 -- Table structure for produtos
