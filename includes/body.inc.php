@@ -334,7 +334,7 @@ function bot($menu=HOME, $id=0)
                                         echo $dadosCU['count_users'];
                                     ?>
                                 </div>
-                                <div class="count-title">Registrados</div>
+                                <div class="count-title">Utilizadores</div>
                             </div></li>
 
                     </ul>

@@ -1,8 +1,10 @@
 <?php
 include_once("includes/body.inc.php");
-$sql="insert into encomendas(encomendaData,encomendaPerfilId) values(now(),".$_SESSION['id'].")";
+$total=floatval($_POST['total']);
+$sql="insert into encomendas(encomendaData,encomendaPerfilId, encomendaValorFinal) values(now(),".$_SESSION['id'].",$total)";
 mysqli_query($con,$sql);
 $encomendaId=mysqli_insert_id($con);
+
 $cont=0;
 if(isset($_SESSION['carrinho'])) {
     foreach ($_SESSION['carrinho'] as $produto) {
@@ -11,7 +13,7 @@ if(isset($_SESSION['carrinho'])) {
             $result = mysqli_query($con, $sql);
             if (mysqli_affected_rows($con) > 0) {
                 $dados = mysqli_fetch_array($result);
-                $sql = "insert into encomendadetalhes values($encomendaId,$prdId,$quant,$dados[0])";
+                $sql = "insert into encomendadetalhes values($prdId,$encomendaId,$quant,$dados[0])";
                 mysqli_query($con, $sql);
             }
         }

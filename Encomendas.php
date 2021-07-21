@@ -25,7 +25,7 @@ top(PERFIL);
             <table class='table caption-top' width="70%">
                 <h3>Historico das encomendas</h3>
                 <tr>
-                    <th width="30%" class="text-center" >Data de Realização</th>
+                    <th width="30%" class="text-center" >Data de RealizaÃ§Ã£o</th>
                     <th width="20%" class="text-center">Valor</th>
                     <th width="20%" class="text-center">Estado</th>
                     <th width="20%" class="text-center">Detalhes</th>
@@ -53,7 +53,7 @@ top(PERFIL);
                                 <table class="table caption-top" style="color: #000">
                                     <tr>
                                         <th width="50%" class="text-center">Produto</th>
-                                        <th width="30%" class="text-center" >Preço</th>
+                                        <th width="30%" class="text-center" >PreÃ§o</th>
                                         <th width="20%" class="text-center">Quant.</th>
                                     </tr>
                                     <?php

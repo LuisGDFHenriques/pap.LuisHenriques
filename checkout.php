@@ -135,6 +135,7 @@ $dadosPerfil=mysqli_fetch_array($res);
                 <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Cancelar</button>
                 <button type="submit" class="btn btn-outline-success">Finalizar</button>
             </div>
+                <input type="hidden" name="total" value="<?php echo $total ?>">
             </form>
         </div>
     </div>
