@@ -23,7 +23,7 @@ $result=mysqli_query($con,$sql);
                 ?>
                 <tr>
                     <td class="text-center"><?php echo $dados['produtoNome']?></td>
-                    <td class="text-center"><?php echo $dados['encomendaDetalhePreco']?>&euro;</td>
+                    <td class="text-center"><?php echo $dados['produtoPreco']?>&euro;</td>
                     <td class="text-center"><?php echo $dados['encomendaDetalheQuantidade']?></td>
                 </tr>
                 <?php
