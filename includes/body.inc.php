@@ -1,7 +1,7 @@
 <?php
 include_once("config.inc.php");
 $con=mysqli_connect(HOST,USER,PWD,DATABASE);
-$con->set_charset("utf8");
+$con->set_charset("utf-8");
 session_start();
 
 function top($menu=HOME)
